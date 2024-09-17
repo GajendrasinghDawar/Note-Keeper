@@ -4,6 +4,8 @@ import { useState } from 'react'
 import './App.css'
 import VibrationComponent from './components/Vibration'
 import CheckBattery from './components/CheckBattery'
+import Notepad from './components/Notepad'
+import ContactPicker from './components/ContactPicker'
 
 function App() {
 
@@ -11,9 +13,7 @@ function App() {
 
   return (
     <div>
-      <VibrationComponent />
-      <hr />
-      <CheckBattery />
+      <ContactPicker />
     </div>
   )
 }
