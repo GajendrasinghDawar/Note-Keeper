@@ -8,9 +8,6 @@ import Notepad from './components/Notepad'
 import ContactPicker from './components/ContactPicker'
 
 function App() {
-
-
-
   return (
     <div>
       <ContactPicker />
