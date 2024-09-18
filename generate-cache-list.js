@@ -5,8 +5,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const distDir = join(__dirname, 'dist');
-const cacheFilePath = join(__dirname, 'dist', 'cache-list.js'); // Change to public directory
+const distDir = join(__dirname, 'dist'); // Change to your build directory
+const cacheFilePath = join(distDir, 'cache-list.js'); // Change to your desired output directory
 
 function generateCacheList(dir, fileList = []) {
     const files = readdirSync(dir);
@@ -17,15 +17,18 @@ function generateCacheList(dir, fileList = []) {
             generateCacheList(filePath, fileList);
         } else
         {
-            // Replace backslashes with forward slashes for URL paths
-            fileList.push(filePath.replace(distDir, '').replace(/\\/g, '/'));
+            // Exclude sw.js and replace backslashes with forward slashes for URL paths
+            if (!filePath.endsWith('sw.js'))
+            {
+                fileList.push(filePath.replace(distDir, '').replace(/\\/g, '/'));
+            }
         }
     });
     return fileList;
 }
 
 const cacheList = generateCacheList(distDir);
-const cacheListContent = `const urlsToCache = ${JSON.stringify(cacheList, null, 2)};\n\nconsole.log('cache-list.js has been loaded');`;
+const cacheListContent = `const urlsToCache = ${JSON.stringify(cacheList, null, 2)};\n\nconsole.log('cache-list.js has been loaded');\n`;
 
 writeFileSync(cacheFilePath, cacheListContent);
 console.log('Cache list generated.');

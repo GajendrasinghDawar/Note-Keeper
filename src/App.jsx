@@ -1,16 +1,11 @@
 // @ts-nocheck
 import React from 'react'
-import { useState } from 'react'
-import './App.css'
-import VibrationComponent from './components/Vibration'
-import CheckBattery from './components/CheckBattery'
-import Notepad from './components/Notepad'
-import ContactPicker from './components/ContactPicker'
+import TodoComponent from './Todo'
 
 function App() {
   return (
     <div>
-      <ContactPicker />
+      <TodoComponent />
     </div>
   )
 }
