@@ -1,7 +1,7 @@
 {
     "name": "Codepad Masters, the best PWA in town",
     "short_name": "Codepad",
-    "start_url": "./?utm_source=pwa",
+    "start_url": "/",
     "theme_color": "#ffc252",
     "scope": "./",
     "display": "standalone",
