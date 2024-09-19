@@ -5,6 +5,9 @@
             "@/*": [
                 "src/*"
             ],
+            "@/Components/*": [
+                "src/Components/*"
+            ],
             "@components/*": [
                 "src/components/*"
             ],
