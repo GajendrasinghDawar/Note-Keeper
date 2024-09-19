@@ -1,5 +1,5 @@
-import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
+import PrimaryButton from '@/components/PrimaryButton';
+import TextInput from '@/components/TextInput';
 import InputLabel from '@/components/InputLabel';
 import MarkDownEditor from "@/Components/MarkdownEditor";
 
