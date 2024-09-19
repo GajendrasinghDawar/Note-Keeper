@@ -10,7 +10,6 @@ import Placeholder from '@tiptap/extension-placeholder'
 import StarterKit from "@tiptap/starter-kit";
 import { Markdown } from "tiptap-markdown";
 import Link from "@tiptap/extension-link";
-
 import MenuBar from "@/components/MenuBar";
 
 const extensions = [
