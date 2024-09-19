@@ -1,7 +1,7 @@
 import PrimaryButton from '@/components/PrimaryButton';
 import TextInput from '@/components/TextInput';
 import InputLabel from '@/components/InputLabel';
-import MarkDownEditor from "@/Components/MarkdownEditor";
+import MarkDownEditor from "@/components/MarkdownEditor";
 
 export default function NoteForm({ data, setData, handleSubmit }) {
 
