@@ -11,7 +11,7 @@ import StarterKit from "@tiptap/starter-kit";
 import { Markdown } from "tiptap-markdown";
 import Link from "@tiptap/extension-link";
 
-import { MenuBar } from "./MenuBar";
+import MenuBar from "./MenuBar";
 
 const extensions = [
     Link.configure({

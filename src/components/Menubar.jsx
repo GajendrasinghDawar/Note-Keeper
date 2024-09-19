@@ -7,7 +7,7 @@ import Tooltip from "./Tooltip";
 import { MenuButton } from "./MenuButton";
 import { SetLinkForm } from "./SetLinkForm";
 
-export function MenuBar() {
+export default function MenuBar() {
 
     const { editor } = useCurrentEditor();
 
