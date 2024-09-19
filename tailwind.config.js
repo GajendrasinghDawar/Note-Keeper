@@ -1,3 +1,16 @@
+import {
+  gray,
+  red,
+  grass,
+  sand,
+  tomato,
+  amber,
+  jade,
+  iris,
+  blackA,
+  whiteA
+} from '@radix-ui/colors';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,8 +18,26 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        gray,
+        sand,
+
+        iris,
+        amber,
+
+        grass,
+        jade,
+
+        red,
+        tomato,
+        blackA,
+        whiteA
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 

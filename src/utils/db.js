@@ -1,31 +1,36 @@
 import { openDB } from 'idb';
 
-// IndexedDB setup and utility functions
 export const DB = {
     openDB: async () => {
-        return await openDB('todo-store', 1, {
+        return await openDB('note-store', 1, {
             upgrade(db) {
-                db.createObjectStore('todos', {
+                db.createObjectStore('notes', {
                     keyPath: 'id',
                     autoIncrement: true,
                 });
             },
         });
     },
-    getTodos: async () => {
+
+    saveNote: async (note) => {
         const db = await DB.openDB();
-        return await db.getAll('todos');
+        const id = await db.put('notes', note);
+        return id;
     },
-    getTod: async (id) => {
+
+    getNotes: async () => {
         const db = await DB.openDB();
-        return await db.get('todos', id);
+        return await db.getAll('notes');
     },
-    saveTodo: async (todo) => {
+
+    getNote: async (id) => {
         const db = await DB.openDB();
-        await db.put('todos', todo); // db.put takes storeName and value
+        const note = await db.get('notes', id);
+        return note;
     },
-    deleteTodo: async (id) => {
+
+    deleteNote: async (id) => {
         const db = await DB.openDB();
-        await db.delete('todos', id); // db.delete takes storeName and key
+        await db.delete('notes', id);
     },
 };
