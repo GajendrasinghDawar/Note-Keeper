@@ -8,7 +8,9 @@ import {
   jade,
   iris,
   blackA,
-  whiteA
+  whiteA,
+  yellow,
+  crimson
 } from '@radix-ui/colors';
 
 /** @type {import('tailwindcss').Config} */
@@ -22,10 +24,10 @@ export default {
       colors: {
         gray,
         sand,
-
+        yellow,
         iris,
         amber,
-
+        crimson,
         grass,
         jade,
 

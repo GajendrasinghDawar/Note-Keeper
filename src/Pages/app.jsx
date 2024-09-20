@@ -3,9 +3,11 @@ import { Outlet } from "react-router-dom";
 
 export default function App() {
     return (
-        <div>
+        <div className="relative min-h-screen">
+
             <Header />
-            <main className="w-full md:max-w-[778px] mx-auto" >
+
+            <main className="w-full md:max-w-[778px] mx-auto p-4">
                 <Outlet />
             </main>
         </div>

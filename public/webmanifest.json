@@ -1,6 +1,6 @@
 {
-    "name": "Codepad Masters, the best PWA in town",
-    "short_name": "Codepad",
+    "name": "Note Keeper",
+    "short_name": "Notekeeper",
     "start_url": "/",
     "theme_color": "#ffc252",
     "scope": "./",
@@ -23,7 +23,7 @@
             "purpose": "maskable"
         }
     ],
-    "description": "This app lets you add notes while you are coding",
+    "description": "This app lets you add notes it works offline and is installable",
     "screenshots": [
         {
             "src": "/icons/screenshot.png",
