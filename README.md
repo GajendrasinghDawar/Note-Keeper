@@ -9,7 +9,7 @@ This is a Progressive Web App (PWA) built with React. It provides offline capabi
 
 ## Getting Started
 
-Follow these instructions to get a copy of the project up and running on your local machine.
+Follow these instructions to get a copy of the project for running on your local machine.
 
 ### Installation Process
 
