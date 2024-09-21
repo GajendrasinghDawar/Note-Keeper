@@ -1,6 +1,6 @@
 # My PWA Note taking App
 
-This is a Progressive Web App (PWA) built with React. It provides offline capabilities and can be installed locally on device. I am learning PWA patterns to make Web App feel more like native App using only web tools. So This app kind of playground for me to apply learned PWA concept,
+This is a Progressive Web App (PWA) built with React. It provides offline capabilities and can be installed locally on device. I am learning PWA patterns to make Web App feel more like native App using only web tools. So This app kind of playground for me to apply learned PWA concept.
 
 ## Features
 
