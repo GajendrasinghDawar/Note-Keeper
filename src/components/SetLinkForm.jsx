@@ -54,10 +54,10 @@ export function SetLinkForm({ editor }) {
                 >
                     <article className="flex flex-col  px-2 py-3 ">
                         <section className="flex items-baseline gap-2 px-2 pt-2">
-                            <Modal.Title className="text-gray-gray12 m-0 text-[17px] font-semibold">
+                            <Modal.Title className="text-gray-gray12 m-0 text-base font-semibold">
                                 Set Link
                             </Modal.Title>
-                            <Modal.Description className="text-gray-gray11 mb-5 text-[15px] leading-normal ">
+                            <Modal.Description className="text-gray-gray11 mb-5 font-medium text-sm leading-normal ">
                                 <span>Dialog for setting text's link .</span>
                             </Modal.Description>
                             <Modal.Close asChild>
@@ -81,21 +81,34 @@ export function SetLinkForm({ editor }) {
                                     value={ url }
                                     onChange={ (e) => setUrl(e.target.value) }
                                     placeholder="e.g. https://example.com"
-                                    className="mt-2 -ml-1 block w-full text-sand-sand11"
+                                    className="mt-1 py-1 px-2 focus:outline-none  block w-full text-sand-sand11"
                                     autoComplete="link"
                                 />
                             </div>
                             <div className="flex items-end justify-end gap-5 w-full">
-                                <PrimaryButton
+                                <button
+                                    className={ `
+                                     inline-flex items-center px-4 py-2 bg-sand-sand12  hover:opacity-95 border border-transparent
+                                        font-semibold text-xs
+                                        uppercase tracking-widest
+                                        active:ring-sand-sand12 focus:outline-none focus:ring-2
+                                        focus:ring-sand-sand12 focus:ring-offset-2
+                                        transition ease-in-out duration-150 rounded-lg text-gray-gray6 hover:text-gray-gray2
+   `}
                                     onClick={ handleSubmit }>
                                     Submit
-                                </PrimaryButton>
+                                </button>
                                 <Modal.Close
                                     asChild
                                 >
-                                    <SecondaryButton>
+                                    <button
+                                        className=" inline-flex items-center px-4 py-2  bg-sand-sand5 hover:bg-sand-sand6  border border-transparent  font-semibold text-xs uppercase tracking-widest
+                 hover:ring-sand-sand8   active:bg-sand-sand6 focus:outline-none focus:ring-2
+                focus:ring-sand-sand9 focus:ring-offset-2 
+                transition ease-in-out duration-150 rounded-lg text-gray-gray11 hover:text-gray-gray12"
+                                    >
                                         Cancel
-                                    </SecondaryButton>
+                                    </button>
 
                                 </Modal.Close>
                             </div>
