@@ -23,7 +23,7 @@
             "src": "/icons/maskable-icon-rounded-1024.png",
             "sizes": "1024x1024",
             "type": "image/png",
-            "purpose": "rounded"
+            "purpose": "any"
         },
         {
             "src": "/icons/maskable-icon-1024.png",
