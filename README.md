@@ -1,9 +1,32 @@
-# React + Vite
+# My PWA Note taking App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Progressive Web App (PWA) built with React. It provides offline capabilities and can be installed locally on device. I am learning PWA patterns to make Web App feel more like native App using only web tools. So This app kind of playground for me to apply learned PWA concept,
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Offline support
+- Installable on desktop and mobile devices
 
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+### Installation Process
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/GajendrasinghDawar/Note-Keeper.git
+cd my-pwa-react-app
+```
+
+2. **Install dependencies:**
+
+```bash
+    npm install
+```
+
+3. **Start the development server:**
+```bash
+    npm run dev 
+```

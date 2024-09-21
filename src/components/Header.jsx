@@ -25,7 +25,7 @@ export default function Header() {
                             hover:ring-2 hover:ring-crimson-crimson7 inline-flex items-center     border-transparent
                             font-semibold text-xs
                             uppercase tracking-widest
-                            active:ring-crimson-crimson11 focus:outline-none 
+                             focus:outline-none
                             focus:ring-2
                             focus:ring-crimson-crimson11 focus:ring-offset-2
                             transition ease-in-out duration-150 rounded-lg
