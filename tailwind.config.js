@@ -10,7 +10,8 @@ import {
   blackA,
   whiteA,
   yellow,
-  crimson
+  crimson,
+  green
 } from '@radix-ui/colors';
 
 /** @type {import('tailwindcss').Config} */
@@ -30,7 +31,7 @@ export default {
         crimson,
         grass,
         jade,
-
+        green,
         red,
         tomato,
         blackA,

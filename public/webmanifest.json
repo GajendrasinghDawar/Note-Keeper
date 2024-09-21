@@ -2,32 +2,64 @@
     "name": "Note Keeper",
     "short_name": "Notekeeper",
     "start_url": "/",
-    "theme_color": "#ffc252",
+    "theme_color": "#94ce9a",
+    "background_color": "#94ce9a",
     "scope": "./",
     "display": "standalone",
     "icons": [
         {
-            "src": "/icons/icon-512.png",
+            "src": "/icons/maskable-icon-512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "/icons/icon-1024.png",
+            "src": "/icons/maskable-icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/icons/maskable-icon-rounded-1024.png",
             "sizes": "1024x1024",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "rounded"
         },
         {
-            "src": "/icons/icon-maskable.png",
-            "sizes": "512x512",
+            "src": "/icons/maskable-icon-1024.png",
+            "sizes": "1024x1024",
             "type": "image/png",
             "purpose": "maskable"
         }
     ],
-    "description": "This app lets you add notes it works offline and is installable",
+    "description": "This app lets you add notes. It works offline and is installable, give it a try!",
     "screenshots": [
         {
-            "src": "/icons/screenshot.png",
-            "sizes": "1170x2532",
+            "src": "/screenshots/homepage.png",
+            "sizes": "1366x625",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Note Keeper"
+        },
+        {
+            "src": "/screenshots/listpage.png",
+            "sizes": "320x480",
+            "type": "image/png"
+        },
+        {
+            "src": "/screenshots/homepage-mobile.png",
+            "sizes": "360x625",
+            "type": "image/png",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "/screenshots/createpage.png",
+            "sizes": "1366x625",
+            "type": "image/png"
+        },
+        {
+            "src": "/screenshots/showpage.png",
+            "sizes": "1366x625",
             "type": "image/png"
         }
     ]

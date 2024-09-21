@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
-        <header className=" border-b border-yellow-yellow5 sticky top-0  backdrop-blur-lg bg-opacity-50 bg-gradient-to-r from-yellow-yellow2 z-50">
+        <header className=" border-b border-yellow-yellow5 sticky top-0  backdrop-blur-lg bg-opacity-50 bg-gradient-to-r from-yellow-yellow3  from-600% z-50  to-yellow-yellow2">
             <nav className="flex justify-between px-4 py-2  w-full md:max-w-[778px] mx-auto md:py-3">
                 <div className="relative -ml-1 md:p-0 shrink-0 flex items-center ">
                     <Link href="/">
