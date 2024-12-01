@@ -44,6 +44,6 @@ cd my-pwa-react-app
 **Here are some  resources if you want to learn more about Progressive Web App design patterns:**
 
 - [Web.dev: Progressive Web Apps](https://web.dev/progressive-web-apps/)
-- [MDN Web Docs: Progressive Web Apps]([https://developers.google.com/web/progressive-web-apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps))
-- [>Mr. Maximiliano Firtman's website]("https://firt.dev/)
+- [MDN Web Docs: Progressive Web Apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+- [Mr. Maximiliano Firtman's website](https://firt.dev/)
 
