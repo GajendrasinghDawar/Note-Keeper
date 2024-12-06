@@ -1,0 +1,7 @@
+Simple Open Source License
+
+Copyright (c) 2023 Gajendrasingh Dawar
+
+You are free to use, share, and modify this software.
+
+This software is provided "as is", with the hope that it will be useful. However, the author is not responsible for any  damages that may occur from using this software.
