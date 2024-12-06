@@ -1,44 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="manifest" href="/webmanifest.json" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-  <link rel="manifest" href="/webmanifest.json" />
+    <meta property="og:title" content="Note Keeper" />
+    <meta
+      property="og:description"
+      content="Keep your notes organized and accessible anywhere with Note Keeper."
+    />
+    <meta
+      property="og:image"
+      content="https://notes.gajendrasingh.me/og-images/og-social.png"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1349" />
+    <meta property="og:image:height" content="625" />
+    <meta property="og:url" content="https://notes.gajendrasingh.me/" />
+    <meta property="og:type" content="website" />
 
-  <meta property="og:title" content="Note Keeper" />
-  <meta property="og:description" content="Keep your notes organized and accessible anywhere with Note Keeper." />
-  <meta property="og:image" content="https://notes.gajendrasingh.me/og-images/og-social.png" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1349" />
-  <meta property="og:image:height" content="625" />
-  <meta property="og:url" content="https://notes.gajendrasingh.me/" />
-  <meta property="og:type" content="website" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap"
+      rel="stylesheet"
+    />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Note Keeper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Keeper</title>
+  </head>
 
-<body class="h-full w-full">
-  <div id="root"></div>
+  <body class="h-full w-full">
+    <div id="root"></div>
 
-  <script type="module" src="/src/Pages/main.jsx"></script>
+    <script type="module" src="/src/Pages/main.jsx"></script>
 
-  <script type="module">
-    if (!import.meta.env.DEV && 'serviceWorker' in navigator) {
-              window.addEventListener('load', () =>
-              {
-                navigator.serviceWorker.register('/sw.js').then(registration =>
-                {
-                  console.log('SW registered.');
-                }).catch(registrationError =>
-                {
-                  console.log('SW registration failed: ', registrationError);
-                });
-              });
-            }
-          </script>
-</body>
-
+    <script type="module">
+      if (!import.meta.env.DEV && "serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log("SW registered.")
+            })
+            .catch((registrationError) => {
+              console.log("SW registration failed: ", registrationError)
+            })
+        })
+      }
+    </script>
+  </body>
 </html>

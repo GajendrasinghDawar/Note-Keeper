@@ -1,3 +1,5 @@
+import defaultTheme from "tailwindcss/defaultTheme"
+
 import {
   gray,
   red,
@@ -11,17 +13,19 @@ import {
   whiteA,
   yellow,
   crimson,
-  green
-} from '@radix-ui/colors';
+  green,
+} from "@radix-ui/colors"
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+        inter: ["Inter", ...defaultTheme.fontFamily.sans],
+        playwrite: ["Playwrite HR Lijeva", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         gray,
         sand,
@@ -35,12 +39,9 @@ export default {
         red,
         tomato,
         blackA,
-        whiteA
+        whiteA,
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require("@tailwindcss/typography")],
 }
-

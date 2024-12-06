@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 export default function App() {
     return (
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen overflow-x-hidden">
 
             <Header />
 
