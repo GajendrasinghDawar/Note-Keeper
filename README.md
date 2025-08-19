@@ -27,7 +27,7 @@ This is a Progressive Web App (PWA) built with React. It provides offline capabi
 
 ```bash
 git clone https://github.com/GajendrasinghDawar/Note-Keeper.git
-cd my-pwa-react-app
+cd Note-Keeper
 ```
 
 2. **Install dependencies:**
