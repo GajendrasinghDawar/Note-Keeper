@@ -25,3 +25,5 @@ env
 *.njsproj
 *.sln
 *.sw?
+dev-dist
+dev-dist/*

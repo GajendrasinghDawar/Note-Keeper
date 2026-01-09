@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <link rel="manifest" href="/webmanifest.json" />
 
     <meta property="og:title" content="Note Keeper" />
     <meta
@@ -42,20 +41,5 @@
     <div id="root"></div>
 
     <script type="module" src="/src/Pages/main.jsx"></script>
-
-    <script type="module">
-      if (!import.meta.env.DEV && "serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/sw.js")
-            .then((registration) => {
-              console.log("SW registered.")
-            })
-            .catch((registrationError) => {
-              console.log("SW registration failed: ", registrationError)
-            })
-        })
-      }
-    </script>
   </body>
 </html>
