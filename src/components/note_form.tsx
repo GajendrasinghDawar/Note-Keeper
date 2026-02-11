@@ -36,9 +36,11 @@ export default function NoteForm({ data, setData, handleSubmit }: NoteFormProps)
         <MarkDownEditor value={data.content} setData={setData} />
       </div>
 
-      <PrimaryButton type='submit' className='ml-1'>
-        post note
-      </PrimaryButton>
+      <div className='sticky bottom-0 py-3 bg-slate2 -mx-4 px-4'>
+        <PrimaryButton type='submit' className='ml-1'>
+          post note
+        </PrimaryButton>
+      </div>
     </form>
   )
 }

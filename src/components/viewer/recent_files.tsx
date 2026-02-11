@@ -98,10 +98,10 @@ export default function RecentFiles({ onOpenHandle, onOpenReadOnly }: RecentFile
 
       <ul className='divide-y divide-slate4 border border-slate5 rounded-lg overflow-hidden'>
         {files.map(entry => (
-          <li key={entry.fileName}>
+          <li key={entry.fileName} className='overflow-hidden '>
             <button
               onClick={() => handleOpen(entry)}
-              className='w-full text-left px-4 py-3 hover:bg-slate3 transition-colors group flex items-start gap-3'
+              className='w-full text-left px-4 py-3 hover:bg-slate3 transition-colors group flex items-start gap-3 cursor-pointer'
             >
               <span className='shrink-0 mt-0.5 text-slate9'>
                 <FileText className='size-4' />
