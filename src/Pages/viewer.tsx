@@ -10,6 +10,7 @@ import Link from '@tiptap/extension-link'
 import MarkdownRenderer from '@/components/viewer/markdown_renderer'
 import FileDropZone from '@/components/viewer/file_drop_zone'
 import ViewerToolbar from '@/components/viewer/viewer_toolbar'
+import RecentFiles from '@/components/viewer/recent_files'
 import MenuBar from '@/components/menubar'
 import { useFileHandler } from '@/hooks/use_file_handler'
 import { useFileLauncher } from '@/hooks/use_file_launcher'
@@ -163,7 +164,11 @@ export default function MarkdownViewer() {
 
         <div className='flex-1 px-4 py-6'>
           {!file.content ? (
-            <EmptyState onOpenFile={openFile} />
+            <EmptyState
+              onOpenFile={openFile}
+              onOpenHandle={readFileHandle}
+              onOpenReadOnly={loadReadOnlyFile}
+            />
           ) : mode === 'view' ? (
             <MarkdownRenderer content={file.content} />
           ) : (
@@ -193,9 +198,17 @@ export default function MarkdownViewer() {
   )
 }
 
-function EmptyState({ onOpenFile }: { onOpenFile: () => void }) {
+function EmptyState({
+  onOpenFile,
+  onOpenHandle,
+  onOpenReadOnly,
+}: {
+  onOpenFile: () => void
+  onOpenHandle: (handle: FileSystemFileHandle) => void
+  onOpenReadOnly: (name: string, content: string) => void
+}) {
   return (
-    <div className='flex flex-col items-center justify-center py-32 text-center'>
+    <div className='flex flex-col items-center justify-center py-16 text-center'>
       <h2 className='text-xl font-semibold text-slate12 mb-2'>Markdown Viewer</h2>
       <p className='text-sm text-slate10 mb-6 max-w-80'>
         Open a .md file to view or edit it. You can also drag & drop a file here, or open one from
@@ -207,6 +220,8 @@ function EmptyState({ onOpenFile }: { onOpenFile: () => void }) {
       >
         Open a Markdown file
       </button>
+
+      <RecentFiles onOpenHandle={onOpenHandle} onOpenReadOnly={onOpenReadOnly} />
     </div>
   )
 }

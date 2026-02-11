@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react'
+import { RecentFilesDB } from '@/utils/recent_files'
 
 interface FilePickerAcceptType {
   description?: string
@@ -57,6 +58,7 @@ export function useFileHandler() {
       const text = await f.text()
       setFile({ handle, content: text, fileName: f.name })
       setIsDirty(false)
+      RecentFilesDB.track(f.name, text, handle).catch(() => {})
     } catch (err) {
       console.error('Failed to read file:', err)
       alert('Could not read the file. It may have been moved or permissions were revoked.')
@@ -70,6 +72,7 @@ export function useFileHandler() {
   const loadReadOnlyFile = useCallback((name: string, content: string) => {
     setFile({ handle: null, content, fileName: name })
     setIsDirty(false)
+    RecentFilesDB.track(name, content).catch(() => {})
   }, [])
 
   const openFile = useCallback(async () => {
@@ -148,6 +151,7 @@ export function useFileHandler() {
         const f = await handle.getFile()
         setFile({ handle, content: markdown, fileName: f.name })
         setIsDirty(false)
+        RecentFilesDB.track(f.name, markdown, handle).catch(() => {})
       } catch (err) {
         if ((err as Error).name !== 'AbortError') {
           console.error('Failed to save file:', err)
