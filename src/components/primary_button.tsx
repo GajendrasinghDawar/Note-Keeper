@@ -1,7 +1,7 @@
-import { SpringIcon } from "@/components/Icons";
+import { SpringIcon } from '@/components/icons'
 
 export default function PrimaryButton({
-  className = "",
+  className = '',
   disabled,
   children,
   ...props
@@ -16,12 +16,12 @@ export default function PrimaryButton({
                 active:ring-slate12 focus:outline-none focus:ring-2
                 focus:ring-slate12 focus:ring-offset-2
                 transition ease-in-out duration-150 rounded-lg  ${
-                  disabled && "opacity-25"
+                  disabled && 'opacity-25'
                 } text-slate1 ${className}`}
       disabled={disabled}
     >
-      <SpringIcon className={"mr-2"} />
+      <SpringIcon className={'mr-2'} />
       {children}
     </button>
-  );
+  )
 }

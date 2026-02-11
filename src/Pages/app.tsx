@@ -1,15 +1,14 @@
-import Header from "@/components/Header";
-import { Outlet } from "react-router-dom";
+import Header from '@/components/header'
+import { Outlet } from 'react-router-dom'
 
 export default function App(): React.ReactElement {
-    return (
-        <div className="relative min-h-screen overflow-x-hidden">
+  return (
+    <div className='relative min-h-screen overflow-x-hidden'>
+      <Header />
 
-            <Header />
-
-            <main className="w-full md:max-w-[778px] mx-auto p-4">
-                <Outlet />
-            </main>
-        </div>
-    )
+      <main className='w-full md:max-w-[778px] mx-auto p-4'>
+        <Outlet />
+      </main>
+    </div>
+  )
 }

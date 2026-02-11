@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 export default function DangerButton({
-  className = "",
+  className = '',
   disabled,
   children,
   ...props
@@ -17,12 +17,12 @@ export default function DangerButton({
                 hover:bg-red10
                 bg-red9
                 active:bg-red10 ring-offset-2 ring-2 ring-red10 focus:outline-none focus:ring-2 focus:ring-red7 focus:ring-offset-2 transition ease-in-out duration-150 ${
-                  disabled && "opacity-25"
+                  disabled && 'opacity-25'
                 } ` + className
       }
       disabled={disabled}
     >
       {children}
     </button>
-  );
+  )
 }

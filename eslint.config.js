@@ -1,5 +1,5 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
+import globals from 'globals'
+import pluginJs from '@eslint/js'
 import react from 'eslint-plugin-react'
 import tseslint from 'typescript-eslint'
 
@@ -13,11 +13,11 @@ export default [
     rules: {
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
-      "react/jsx-no-undef": "error",
-      "@typescript-eslint/no-unused-vars": [ "error", { "caughtErrors": "none" } ],
-      "no-unused-vars": "off",
+      'react/jsx-no-undef': 'error',
+      '@typescript-eslint/no-unused-vars': ['error', { caughtErrors: 'none' }],
+      'no-unused-vars': 'off',
     },
-    files: [ "**/*.{js,mjs,cjs,jsx,ts,tsx}" ],
+    files: ['**/*.{js,mjs,cjs,jsx,ts,tsx}'],
 
     languageOptions: {
       parserOptions: {
@@ -27,11 +27,11 @@ export default [
       },
       globals: {
         ...globals.browser,
-        "globals": true,
-        "global": true,
-        "route": true,
-        "window": true
-      }
-    }
+        globals: true,
+        global: true,
+        route: true,
+        window: true,
+      },
+    },
   },
-];
+]

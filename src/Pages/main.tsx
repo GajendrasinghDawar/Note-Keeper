@@ -1,53 +1,53 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./global.css";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './global.css'
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import Create from "@/Pages/notes/Create";
-import ErrorPage from "@/Pages/ErrorPage";
+import Create from '@/Pages/notes/create'
+import ErrorPage from '@/Pages/error_page'
 
-import App from "./app";
-import Index, { loader as IndexLoader } from "./notes/Index";
-import Show, { loader as ShowLoader } from "@/Pages/notes/Show";
-import Edit, { loader as EditLoader } from "@/Pages/notes/Edit";
-import { NotFound } from "@/components/NotFound";
+import App from './app'
+import Index, { loader as IndexLoader } from './notes/index'
+import Show, { loader as ShowLoader } from '@/Pages/notes/show'
+import Edit, { loader as EditLoader } from '@/Pages/notes/edit'
+import { NotFound } from '@/components/not_found'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Index />,
         loader: IndexLoader,
       },
       {
-        path: "note/create",
+        path: 'note/create',
         element: <Create />,
       },
       {
-        path: "note/:noteId",
+        path: 'note/:noteId',
         element: <Show />,
         loader: ShowLoader,
       },
       {
-        path: "note/:noteId/edit",
+        path: 'note/:noteId/edit',
         element: <Edit />,
         loader: EditLoader,
       },
       {
-        path: "*",
+        path: '*',
         element: <NotFound />,
       },
     ],
   },
-]);
+])
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
-);
+  </StrictMode>
+)

@@ -1,11 +1,11 @@
 export interface Note {
-  id?: number;
-  title: string;
-  content: string;
-  created: Date;
+  id?: number
+  title: string
+  content: string
+  created: Date
 }
 
 export interface NoteFormData {
-  title: string;
-  content: string;
+  title: string
+  content: string
 }
