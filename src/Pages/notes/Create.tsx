@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { DB } from '@/utils/db';
 import NoteForm from '@/components/NoteForm';
-import { useNavigate, redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { NoteFormData } from '@/types';
 
 
 export default function Create() {
-    const [ data, setData ] = useState({ content: '', title: '' });
+    const [ data, setData ] = useState<NoteFormData>({ content: '', title: '' });
     const navigate = useNavigate();
 
-    async function submit(e) {
+    async function submit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
-        let noteId = await DB.saveNote({
+        const noteId = await DB.saveNote({
             content: data.content,
             title: data.title,
             created: new Date(),

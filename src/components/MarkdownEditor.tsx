@@ -3,7 +3,7 @@ import React from "react";
 import { Color } from "@tiptap/extension-color";
 import ListItem from "@tiptap/extension-list-item";
 import TextStyle from "@tiptap/extension-text-style";
-import { EditorProvider } from "@tiptap/react";
+import { Editor, EditorProvider } from "@tiptap/react";
 import Placeholder from '@tiptap/extension-placeholder'
 
 
@@ -11,6 +11,7 @@ import StarterKit from "@tiptap/starter-kit";
 import { Markdown } from "tiptap-markdown";
 import Link from "@tiptap/extension-link";
 
+import { NoteFormData } from "@/types";
 
 import MenuBar from "./Menubar";
 
@@ -25,7 +26,7 @@ const extensions = [
         html: true,
     }),
     Color.configure({ types: [ TextStyle.name, ListItem.name ] }),
-    TextStyle.configure({ types: [ ListItem.name ] }),
+    TextStyle.configure({ types: [ ListItem.name ] } as Record<string, unknown>),
     Placeholder.configure({
         placeholder: 'Write something …',
     }),
@@ -40,11 +41,16 @@ const extensions = [
     }),
 ];
 
-export default function MarkDownEditor({ value, setData }) {
+interface MarkDownEditorProps {
+    value: string;
+    setData: React.Dispatch<React.SetStateAction<NoteFormData>>;
+}
+
+export default function MarkDownEditor({ value, setData }: MarkDownEditorProps) {
 
     const intialContent = value;
 
-    function onUpdate({ editor }) {
+    function onUpdate({ editor }: { editor: Editor }) {
         const htmlOutput = editor.getHTML();
         setData(prevData => ({ ...prevData, content: htmlOutput }));
     }

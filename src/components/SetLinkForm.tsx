@@ -1,25 +1,28 @@
 import React, { useCallback, useState } from "react";
+import { Editor } from "@tiptap/react";
 
 import Modal from "./Modal";
 import Tooltip from "./Tooltip";
 import { MenuButton } from "./MenuButton";
 import { Cross2Icon, Link1Icon } from "@radix-ui/react-icons"
 import TextInput from "./TextInput";
-import PrimaryButton from "./PrimaryButton";
 
 import InputLabel from "./InputLabel";
-import SecondaryButton from "./SecondaryButton";
 
-export function SetLinkForm({ editor }) {
+interface SetLinkFormProps {
+    editor: Editor;
+}
+
+export function SetLinkForm({ editor }: SetLinkFormProps) {
     const [ open, setOpen ] = useState(false);
     const [ url, setUrl ] = useState("");
 
-    function onOpenChange(open) {
+    function onOpenChange(open: boolean) {
         setOpen(open);
     }
 
     const setLink = useCallback(
-        (e) => {
+        (e: React.MouseEvent) => {
             e.preventDefault();
             const previousUrl = editor.getAttributes("link").href;
             setUrl(previousUrl || "");

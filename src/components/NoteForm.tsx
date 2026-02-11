@@ -1,9 +1,17 @@
+import React from 'react';
 import PrimaryButton from '@/components/PrimaryButton';
 import TextInput from '@/components/TextInput';
 import InputLabel from '@/components/InputLabel';
 import MarkDownEditor from "@/components/MarkdownEditor";
+import { NoteFormData } from '@/types';
 
-export default function NoteForm({ data, setData, handleSubmit }) {
+interface NoteFormProps {
+    data: NoteFormData;
+    setData: React.Dispatch<React.SetStateAction<NoteFormData>>;
+    handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+}
+
+export default function NoteForm({ data, setData, handleSubmit }: NoteFormProps) {
 
     return (
         <form onSubmit={ handleSubmit } className="  gap-1 space-y-6 text-gray-gray11 justify-start	min-w-full">

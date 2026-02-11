@@ -1,15 +1,35 @@
+import React from "react";
 import * as Dialog from "@radix-ui/react-dialog"
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function Modal({ open, onOpenChange, children }) {
+interface ModalProps {
+    open: boolean;
+    onOpenChange: (open: boolean) => void;
+    children: React.ReactNode;
+}
+
+interface ModalContentProps {
+    open: boolean;
+    children: React.ReactNode;
+}
+
+type ModalComponent = React.FC<ModalProps> & {
+    Trigger: typeof Dialog.Trigger;
+    Close: typeof Dialog.Close;
+    Content: React.FC<ModalContentProps>;
+    Title: typeof Dialog.Title;
+    Description: typeof Dialog.Description;
+};
+
+const Modal: ModalComponent = function Modal({ open, onOpenChange, children }) {
     return (
         <Dialog.Root open={ open } onOpenChange={ onOpenChange }>
             { children }
         </Dialog.Root>
     )
-}
+} as ModalComponent;
 
-let overlayVariants = {
+const overlayVariants = {
     open: {
         opacity: 1,
         backgroundColor: "rgba(0, 0, 0, 0.15)",
@@ -22,7 +42,7 @@ let overlayVariants = {
     }
 }
 
-let dialogVariants = {
+const dialogVariants = {
     closed: {
         opacity: 0, scale: 0.8,
         transition: { ease: "easeIn", duration: 0.2 }
@@ -33,7 +53,7 @@ let dialogVariants = {
     }
 }
 
-function ModalContent({ open, children }) {
+function ModalContent({ open, children }: ModalContentProps) {
     return (
         <AnimatePresence>
             { open && (
@@ -71,4 +91,5 @@ Modal.Close = Dialog.Close
 Modal.Content = ModalContent
 Modal.Title = Dialog.Title
 Modal.Description = Dialog.Description
-Modal.Close = Dialog.Close 
+
+export default Modal;

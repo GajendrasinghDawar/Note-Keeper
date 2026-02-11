@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { DB } from '@/utils/db';
 import NoNoteGreet from "@/components/NoNoteGreet";
+import { Note } from '@/types';
 
 export async function loader() {
     const allNotes = await DB.getNotes();
@@ -10,7 +11,7 @@ export async function loader() {
 }
 
 export default function Index() {
-    const { allNotes } = useLoaderData();
+    const { allNotes } = useLoaderData() as { allNotes: Note[] };
 
     return (
         <div className="p-4">
@@ -33,4 +34,3 @@ export default function Index() {
         </div>
     );
 }
-

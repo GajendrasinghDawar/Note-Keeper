@@ -7,7 +7,7 @@ export default function Header() {
         <header className=" border-b border-yellow-yellow5 sticky top-0  backdrop-blur-lg bg-opacity-50 bg-gradient-to-r from-yellow-yellow3  from-600% z-50  to-yellow-yellow2">
             <nav className="flex justify-between px-4 py-2  w-full md:max-w-[778px] mx-auto md:py-3">
                 <div className="relative -ml-1 md:p-0 shrink-0 flex items-center ">
-                    <Link href="/">
+                    <Link to="/">
                         <ApplicationLogo />
                         <span className=" absolute -rotate-12 top-0 translate-x-4 translate-y-5 text-xs font-bold text-gray-gray12">Notes</span>
                     </Link>

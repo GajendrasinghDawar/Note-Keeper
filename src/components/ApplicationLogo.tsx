@@ -1,5 +1,5 @@
 import * as React from "react";
-const ApplicationLogo = (props) => (
+const ApplicationLogo = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
         className="w-8 h-8"
         xmlns="http://www.w3.org/2000/svg"

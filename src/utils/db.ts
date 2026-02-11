@@ -1,7 +1,8 @@
-import { openDB } from 'idb';
+import { openDB, IDBPDatabase } from 'idb';
+import type { Note } from '@/types';
 
 export const DB = {
-    openDB: async () => {
+    openDB: async (): Promise<IDBPDatabase> => {
         return await openDB('note-store', 1, {
             upgrade(db) {
                 db.createObjectStore('notes', {
@@ -12,24 +13,24 @@ export const DB = {
         });
     },
 
-    saveNote: async (note) => {
+    saveNote: async (note: Note): Promise<number> => {
         const db = await DB.openDB();
         const id = await db.put('notes', note);
-        return id;
+        return id as number;
     },
 
-    getNotes: async () => {
+    getNotes: async (): Promise<Note[]> => {
         const db = await DB.openDB();
         return await db.getAll('notes');
     },
 
-    getNote: async (id) => {
+    getNote: async (id: number): Promise<Note | undefined> => {
         const db = await DB.openDB();
         const note = await db.get('notes', id);
         return note;
     },
 
-    deleteNote: async (id) => {
+    deleteNote: async (id: number): Promise<void> => {
         const db = await DB.openDB();
         await db.delete('notes', id);
     },

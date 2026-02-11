@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { DB } from '@/utils/db';
 import NoteForm from '@/components/NoteForm';
-import { useNavigate, useLoaderData } from "react-router-dom";
+import { useNavigate, useLoaderData, LoaderFunctionArgs } from "react-router-dom";
+import { Note, NoteFormData } from '@/types';
 
-export async function loader({ params }) {
+export async function loader({ params }: LoaderFunctionArgs) {
     const noteId = Number(params.noteId);
     const note = await DB.getNote(noteId);
     return { note };
 }
 
 export default function Edit() {
-    let navigate = useNavigate()
+    const navigate = useNavigate()
 
-    const { note } = useLoaderData();
+    const { note } = useLoaderData() as { note: Note };
 
-    const [ data, setData ] = useState({ content: '', title: '', ...note });
+    const [ data, setData ] = useState<NoteFormData>({ content: note.content ?? '', title: note.title ?? '' });
 
-    async function submit(e) {
+    async function submit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
         await DB.saveNote({

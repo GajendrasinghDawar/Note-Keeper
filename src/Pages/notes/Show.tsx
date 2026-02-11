@@ -1,7 +1,8 @@
-import { useNavigate, useLoaderData, Link } from "react-router-dom";
+import { useNavigate, useLoaderData, Link, LoaderFunctionArgs } from "react-router-dom";
 import { DB } from "@/utils/db";
+import { Note } from '@/types';
 
-export async function loader({ params }) {
+export async function loader({ params }: LoaderFunctionArgs) {
 
     const noteId = Number(params.noteId);
     const note = await DB.getNote(noteId);
@@ -10,11 +11,11 @@ export async function loader({ params }) {
 }
 
 export default function Show() {
-    const { note } = useLoaderData();
+    const { note } = useLoaderData() as { note: Note };
     const navigate = useNavigate();
 
     const handleDelete = async () => {
-        await DB.deleteNote(note.id);
+        await DB.deleteNote(note.id!);
         navigate('/');
     };
 

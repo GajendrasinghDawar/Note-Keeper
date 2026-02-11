@@ -1,6 +1,6 @@
 import { SpringIcon } from "@/components/Icons";
 
-export default function PrimaryButton({ className = '', disabled, children, ...props }) {
+export default function PrimaryButton({ className = '', disabled, children, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
     return (
         <button
             { ...props }

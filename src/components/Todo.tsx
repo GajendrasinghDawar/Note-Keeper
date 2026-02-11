@@ -1,42 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { DB } from './utils/db';
+import React, { useState } from 'react';
 
-const TodoComponent = () => {
-    const [ todos, setTodos ] = useState([]);
+interface TodoItem {
+    id: number;
+    text: string;
+}
 
-    // Load todos from IndexedDB when the component mounts
-    useEffect(() => {
-        const loadTodos = async () => {
-            const storedTodos = await DB.getTodos();
-            setTodos(storedTodos);
-        };
-        loadTodos();
-    }, []);
+const TodoComponent: React.FC = () => {
+    const [ todos, setTodos ] = useState<TodoItem[]>([]);
 
-    // Save todos to IndexedDB whenever the state changes
-    useEffect(() => {
-        todos.forEach(async (todo) => {
-            await DB.saveTodo(todo);
-        });
-    }, [ todos ]);
-
-    const addTodo = (todoText) => {
-        const newTodo = { id: Date.now(), text: todoText }; // No need to include 'id' here
+    const addTodo = (todoText: string) => {
+        const newTodo: TodoItem = { id: Date.now(), text: todoText };
         setTodos([ ...todos, newTodo ]);
     };
 
-    const deleteTodo = async (id) => {
-        await DB.deleteTodo(id);
+    const deleteTodo = (id: number) => {
         setTodos(todos.filter((todo) => todo.id !== id));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const todoText = e.target.elements.todo.value.trim();
+        const form = e.target as HTMLFormElement;
+        const todoInput = form.elements.namedItem('todo') as HTMLInputElement;
+        const todoText = todoInput.value.trim();
         if (todoText)
         {
             addTodo(todoText);
-            e.target.elements.todo.value = '';
+            todoInput.value = '';
         }
     };
 

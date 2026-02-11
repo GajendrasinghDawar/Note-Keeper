@@ -1,4 +1,8 @@
-export function UndoIcon() {
+interface IconProps extends React.SVGProps<SVGSVGElement> {
+    className?: string;
+}
+
+export function UndoIcon(): React.ReactElement {
     return (
         <svg fill="none" viewBox="0 0 24 24" strokeWidth={ 1 } stroke="currentColor" className="size-4 stroke-sand-sand11">
             <path strokeLinecap="round" strokeLinejoin="round" d="m16.49 12 3.75 3.75m0 0-3.75 3.75m3.75-3.75H3.74V4.499" />
@@ -30,7 +34,7 @@ export function PlusIcon() {
     )
 }
 
-export function CaretDownIcon({ className }) {
+export function CaretDownIcon({ className }: IconProps) {
     return (
         <svg
             className={
@@ -45,7 +49,7 @@ export function CaretDownIcon({ className }) {
     )
 }
 
-export function ViewsCountIcon({ className, ...props }) {
+export function ViewsCountIcon({ className, ...props }: IconProps) {
     return (
         <svg
             className={ `w-5 h-7 fill-gray-gray11 ` + className }
@@ -57,7 +61,7 @@ export function ViewsCountIcon({ className, ...props }) {
 
 
 
-export function ReplyCountIcon({ className, ...props }) {
+export function ReplyCountIcon({ className, ...props }: IconProps) {
     return (
         <svg
             className={ `w-5 h-7 fill-gray-gray11 ` + className }
@@ -70,7 +74,7 @@ export function ReplyCountIcon({ className, ...props }) {
     )
 }
 
-export function LikeCountIcon({ className, ...props }) {
+export function LikeCountIcon({ className, ...props }: IconProps) {
     return (
         <svg
             className={ `w-5 h-7 fill-gray-gray11 ` + className }
@@ -79,7 +83,7 @@ export function LikeCountIcon({ className, ...props }) {
     )
 }
 
-export function CalenderIcon({ className, ...props }) {
+export function CalenderIcon({ className, ...props }: IconProps) {
     return (
         <svg
             className={ `w-4 h-4 fill-gray-gray11 ` + className }
@@ -92,7 +96,7 @@ export function CalenderIcon({ className, ...props }) {
     )
 }
 
-export function MailIcon({ className, ...props }) {
+export function MailIcon({ className, ...props }: IconProps) {
     return (
         <svg
             className={ `w-4 h-4 text-gray-gray11 ` + className }
@@ -104,7 +108,7 @@ export function MailIcon({ className, ...props }) {
     )
 }
 
-export function ProfileIcon({ className, ...props }) {
+export function ProfileIcon({ className, ...props }: IconProps) {
     return (
         <svg
             className={ `w-5 h-7 fill-gray-gray11 ` + className }
@@ -115,7 +119,7 @@ export function ProfileIcon({ className, ...props }) {
     )
 }
 
-export function DeleteIcon({ className, ...props }) {
+export function DeleteIcon({ className, ...props }: IconProps) {
     return (
         <svg
             className={ `w-5 h-7 
@@ -130,7 +134,7 @@ export function DeleteIcon({ className, ...props }) {
     )
 }
 
-export function SearchIcon({ className, ...props }) {
+export function SearchIcon({ className, ...props }: IconProps) {
     return (
         <svg
             className={ `w-5 h-7 
@@ -145,7 +149,7 @@ export function SearchIcon({ className, ...props }) {
 }
 
 
-export function GrassIcon({ className, ...props }) {
+export function GrassIcon({ className }: IconProps) {
     return (
         <svg
             className={ `w-5 h-7 ` + className }
@@ -153,7 +157,7 @@ export function GrassIcon({ className, ...props }) {
     )
 }
 
-export function SpringIcon({ className, ...props }) {
+export function SpringIcon({ className }: IconProps) {
     return (
         <svg className={ `w-5 h-7 ` + className } viewBox="0 0 80 80" width="80px" height="80px"><path fill="#f78f8f" d="M40,39.04C37.872,35.523,28.5,19.711,28.5,14c0-6.341,5.159-11.5,11.5-11.5S51.5,7.659,51.5,14 C51.5,19.712,42.128,35.524,40,39.04z" /><path fill="#c74343" d="M40,3c6.065,0,11,4.935,11,11c0,5.268-8.284,19.535-11,24.07C37.284,33.535,29,19.268,29,14 C29,7.935,33.935,3,40,3 M40,2c-6.627,0-12,5.373-12,12c0,6.627,12,26,12,26s12-19.373,12-26C52,7.373,46.627,2,40,2L40,2z" /><path fill="#c74343" d="M42,22c0,1.104-2,8-2,8s-2-6.896-2-8c0-1.104,0.896-2,2-2C41.104,20,42,20.896,42,22z" /><path fill="#f78f8f" d="M40,77.5c-6.341,0-11.5-5.159-11.5-11.5c0-5.712,9.372-21.524,11.5-25.04 C42.128,44.477,51.5,60.289,51.5,66C51.5,72.341,46.341,77.5,40,77.5z" /><path fill="#c74343" d="M40,41.93C42.716,46.465,51,60.732,51,66c0,6.065-4.935,11-11,11s-11-4.935-11-11 C29,60.732,37.284,46.465,40,41.93 M40,40c0,0-12,19.373-12,26c0,6.627,5.373,12,12,12s12-5.373,12-12C52,59.373,40,40,40,40 L40,40z" /><path fill="#c74343" d="M38,58c0-1.104,2-8,2-8s2,6.896,2,8c0,1.104-0.896,2-2,2C38.896,60,38,59.104,38,58z" /><path fill="#f78f8f" d="M34.961,39.563c-6.991,0-19.304-0.339-23.228-2.604c-5.491-3.172-7.38-10.219-4.21-15.71 c2.049-3.548,5.869-5.752,9.972-5.752c2.006,0,3.99,0.533,5.738,1.542c4.947,2.857,13.955,18.882,15.936,22.48 C38.306,39.539,36.813,39.563,34.961,39.563z" /><path fill="#c74343" d="M17.495,15.998c1.919,0,3.817,0.51,5.489,1.476c4.562,2.634,12.776,16.943,15.346,21.562 c-0.861,0.014-2.018,0.027-3.368,0.027c-11.811,0-20.186-0.925-22.978-2.537c-2.545-1.469-4.365-3.841-5.125-6.679 c-0.76-2.838-0.37-5.802,1.099-8.347C9.916,18.106,13.571,15.998,17.495,15.998 M17.495,14.998c-4.147,0-8.181,2.152-10.404,6.002 c-3.314,5.74-1.347,13.079,4.392,16.392c4.024,2.323,16.426,2.671,23.478,2.671C37.967,40.063,40,40,40,40 S29.223,19.921,23.483,16.608C21.594,15.517,19.53,14.998,17.495,14.998L17.495,14.998z" /><path fill="#c74343" d="M25.412,29.268C26.368,29.82,31.34,35,31.34,35s-6.972-1.716-7.928-2.268	c-0.956-0.552-1.284-1.776-0.732-2.732C23.232,29.044,24.455,28.716,25.412,29.268z" /><path fill="#f78f8f" d="M62.505,64.502c-2.006,0-3.99-0.533-5.738-1.542c-4.947-2.857-13.955-18.882-15.936-22.48 c0.863-0.019,2.355-0.043,4.208-0.043c6.991,0,19.304,0.339,23.228,2.604c5.491,3.172,7.38,10.219,4.21,15.71 C70.428,62.298,66.607,64.502,62.505,64.502L62.505,64.502z" /><path fill="#c74343" d="M45.039,40.937c11.81,0,20.186,0.925,22.978,2.537c2.545,1.469,4.365,3.841,5.125,6.679 c0.76,2.838,0.37,5.802-1.099,8.347c-1.959,3.394-5.614,5.502-9.537,5.502c-1.919,0-3.817-0.51-5.489-1.476 c-4.562-2.634-12.776-16.943-15.346-21.562C42.532,40.95,43.689,40.937,45.039,40.937 M45.039,39.937C42.033,39.937,40,40,40,40 s10.777,20.079,16.517,23.392c1.89,1.091,3.953,1.61,5.989,1.61c4.147,0,8.181-2.152,10.403-6.002 c3.314-5.74,1.347-13.079-4.392-16.392C64.492,40.284,52.091,39.937,45.039,39.937L45.039,39.937z" /><path fill="#c74343" d="M54.588,50.732C53.632,50.18,48.66,45,48.66,45s6.972,1.716,7.928,2.268s1.284,1.776,0.732,2.732	C56.768,50.956,55.545,51.284,54.588,50.732z" /><path fill="#f78f8f" d="M17.495,64.502c-4.103,0-7.923-2.204-9.972-5.752c-3.17-5.491-1.281-12.538,4.21-15.71 c3.924-2.265,16.236-2.604,23.228-2.604c1.852,0,3.345,0.024,4.208,0.043c-1.98,3.599-10.989,19.624-15.936,22.48 C21.485,63.969,19.501,64.502,17.495,64.502C17.495,64.502,17.495,64.502,17.495,64.502z" /><path fill="#c74343" d="M34.961,40.937c1.349,0,2.507,0.013,3.368,0.027c-2.57,4.62-10.784,18.928-15.346,21.562 c-1.672,0.965-3.57,1.476-5.489,1.476c-3.924,0-7.578-2.108-9.537-5.502c-1.469-2.545-1.859-5.509-1.099-8.347 c0.76-2.838,2.581-5.21,5.125-6.679C14.776,41.862,23.151,40.937,34.961,40.937 M34.961,39.937 c-7.052,0-19.453,0.347-23.478,2.671C5.744,45.921,3.777,53.26,7.091,59c2.223,3.85,6.256,6.002,10.403,6.002 c2.036,0,4.099-0.519,5.989-1.61C29.223,60.079,40,40,40,40S37.966,39.937,34.961,39.937L34.961,39.937z" /><path fill="#c74343" d="M23.412,47.268C24.368,46.716,31.34,45,31.34,45s-4.972,5.18-5.928,5.732s-2.18,0.224-2.732-0.732	C22.127,49.044,22.455,47.82,23.412,47.268z" /><g><path fill="#f78f8f" d="M45.039,39.563c-1.852,0-3.345-0.024-4.208-0.043c1.98-3.599,10.989-19.624,15.936-22.48 c1.748-1.009,3.732-1.542,5.738-1.542c4.103,0,7.923,2.204,9.972,5.752c3.17,5.491,1.281,12.538-4.21,15.71 c-3.924,2.265-16.235,2.604-23.226,2.604C45.04,39.563,45.04,39.563,45.039,39.563z" /><path fill="#c74343" d="M62.505,15.998c3.924,0,7.578,2.108,9.537,5.502c1.469,2.545,1.859,5.509,1.099,8.347 c-0.76,2.838-2.581,5.21-5.125,6.679c-2.792,1.612-11.168,2.537-22.978,2.537c-1.352,0-2.511-0.013-3.373-0.027 c3.492-6.306,11.194-19.162,15.351-21.562C58.689,16.508,60.587,15.998,62.505,15.998 M62.505,14.998 c-2.036,0-4.099,0.519-5.989,1.61C50.777,19.921,40,40,40,40s2.034,0.063,5.038,0.063c7.052,0,19.454-0.347,23.478-2.671 c5.74-3.314,7.706-10.653,4.392-16.392C70.686,17.15,66.652,14.998,62.505,14.998L62.505,14.998z" /></g><path fill="#c74343" d="M56.588,32.732C55.632,33.284,48.66,35,48.66,35s4.972-5.18,5.928-5.732	c0.956-0.552,2.18-0.224,2.732,0.732C57.873,30.956,57.545,32.18,56.588,32.732z" /><g><path fill="#ffeea3" d="M40 28A12 12 0 1 0 40 52A12 12 0 1 0 40 28Z" /></g></svg>
     )

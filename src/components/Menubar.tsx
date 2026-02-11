@@ -1,4 +1,3 @@
-import React from "react";
 import { useCurrentEditor } from "@tiptap/react";
 
 import { FontFamilyIcon, StrikethroughIcon, FontBoldIcon, DividerHorizontalIcon, TextIcon, ResetIcon, HeadingIcon, LineHeightIcon } from '@radix-ui/react-icons'

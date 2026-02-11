@@ -1,7 +1,15 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 
-function Tooltip({
+interface TooltipProps {
+    children: React.ReactNode;
+    content: React.ReactNode;
+    open?: boolean;
+    defaultOpen?: boolean;
+    onOpenChange?: (open: boolean) => void;
+}
+
+const Tooltip = React.forwardRef<HTMLButtonElement, TooltipProps>(function Tooltip({
     children,
     content,
     open,
@@ -28,6 +36,6 @@ function Tooltip({
             </TooltipPrimitive.Root>
         </TooltipPrimitive.Provider>
     );
-}
+});
 
-export default forwardRef(Tooltip);
+export default Tooltip;
