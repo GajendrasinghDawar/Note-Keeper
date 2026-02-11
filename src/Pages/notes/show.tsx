@@ -15,7 +15,7 @@ export default function Show() {
 
   const handleDelete = async () => {
     await DB.deleteNote(note.id!)
-    navigate('/')
+    navigate('/note')
   }
 
   return (

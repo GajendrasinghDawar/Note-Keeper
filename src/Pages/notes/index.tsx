@@ -2,7 +2,6 @@ import { useLoaderData } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 import { DB } from '@/utils/db'
-import NoNoteGreet from '@/components/no_note_greet'
 import { Note } from '@/types'
 
 export async function loader() {
@@ -15,32 +14,32 @@ export default function Index() {
 
   return (
     <div className='p-4'>
-      <ul className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-        {allNotes.length === 0 ? (
-          <NoNoteGreet />
-        ) : (
-          <>
-            {allNotes.map(note => (
-              <li
-                key={note.id}
-                className='border border-yellow5 rounded-lg hover:shadow-sm overflow-hidden'
+      {allNotes.length === 0 ? (
+        <p className='text-center text-sm text-slate10 py-16'>
+          No notes yet. Create one to get started.
+        </p>
+      ) : (
+        <ul className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+          {allNotes.map(note => (
+            <li
+              key={note.id}
+              className='border border-yellow5 rounded-lg hover:shadow-sm overflow-hidden'
+            >
+              <Link
+                to={`/note/${note.id}`}
+                className='block p-4 rounded h-full w-full   bg-yellow2'
               >
-                <Link
-                  to={`/note/${note.id}`}
-                  className='block p-4 rounded h-full w-full   bg-yellow2'
-                >
-                  <h3 className='text-xl font-semibold text-slate12 capitalize mb-2 truncate w-full'>
-                    {note.title}
-                  </h3>
-                  <p className='mt-auto text-xs font-bold text-slate11'>
-                    {new Date(note.created).toLocaleString()}
-                  </p>
-                </Link>
-              </li>
-            ))}
-          </>
-        )}
-      </ul>
+                <h3 className='text-xl font-semibold text-slate12 capitalize mb-2 truncate w-full'>
+                  {note.title}
+                </h3>
+                <p className='mt-auto text-xs font-bold text-slate11'>
+                  {new Date(note.created).toLocaleString()}
+                </p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }

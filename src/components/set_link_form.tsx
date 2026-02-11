@@ -61,10 +61,13 @@ export function SetLinkForm({ editor }: SetLinkFormProps) {
               </Modal.Description>
               <Modal.Close asChild>
                 <button
-                  className='text-slate11 
+                  className={`
+                    text-slate11 
                                     hover:ring-slate9 
-                                    focus:shadow-slate7 absolute top-[10px] right-[10px] inline-flex h-[25px] w-[25px] ring-1 ring-slate7 appearance-none items-center justify-center rounded-full focus:ring-1 focus:ring-slate9 focus:outline-none mt-2 mr-2
-                                    transition ease-in-out duration-150'
+                                    focus:shadow-slate7 absolute  top-2.5  right-2.5 inline-flex h-6.25  w-6.25 ring-1 ring-slate7 appearance-none items-center justify-center rounded-full focus:ring-1 focus:ring-slate9 focus:outline-none mt-2 mr-2
+                                    transition ease-in-out duration-150
+
+                    `}
                   aria-label='Close'
                 >
                   <Cross2Icon />

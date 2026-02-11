@@ -8,6 +8,7 @@ import Create from '@/Pages/notes/create'
 import ErrorPage from '@/Pages/error_page'
 
 import App from './app'
+import Home, { loader as HomeLoader } from '@/Pages/home'
 import Index, { loader as IndexLoader } from './notes/index'
 import Show, { loader as ShowLoader } from '@/Pages/notes/show'
 import Edit, { loader as EditLoader } from '@/Pages/notes/edit'
@@ -21,7 +22,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/',
+        index: true,
+        element: <Home />,
+        loader: HomeLoader,
+      },
+      {
+        path: 'note',
         element: <Index />,
         loader: IndexLoader,
       },

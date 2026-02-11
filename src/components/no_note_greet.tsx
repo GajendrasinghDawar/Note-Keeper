@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-export default function NoNoteGreet() {
+export default function NoNoteGreet({ noteCount = 0 }: { noteCount?: number }) {
   return (
     <div className='flex flex-col gap-8 justify-center w-full col-span-5 relative '>
       <div className='fixed right-[30vw] -bottom-7  flex justify-center items-end z-10'>
@@ -41,9 +41,22 @@ export default function NoNoteGreet() {
           />
         </div>
         <div className='flex flex-col items-center'>
-          <p className='text-center text-base sm:text-xl md:text-2xl font-bold text-slate12'>
-            No notes found. Create a new note to get started.
-          </p>
+          {noteCount > 0 ? (
+            <p className='text-center text-base sm:text-xl md:text-2xl font-bold text-slate12'>
+              You have{' '}
+              <Link
+                to='/note'
+                className='text-crimson9 hover:text-crimson10 underline underline-offset-4 mr-1.5'
+              >
+                {noteCount} {noteCount === 1 ? 'note' : 'notes'}
+              </Link>
+              in your notebook!
+            </p>
+          ) : (
+            <p className='text-center text-base sm:text-xl md:text-2xl font-bold text-slate12'>
+              No notes yet. Create a new note to get started.
+            </p>
+          )}
         </div>
       </section>
       <section>
