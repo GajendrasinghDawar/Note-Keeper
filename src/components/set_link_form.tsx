@@ -4,7 +4,7 @@ import { Editor } from '@tiptap/react'
 import Modal from './modal'
 import Tooltip from './tooltip'
 import { MenuButton } from './menu_button'
-import { Cross2Icon, Link1Icon } from '@radix-ui/react-icons'
+import { Link as LinkIcon, X } from 'lucide-react'
 import TextInput from './text_input'
 
 import InputLabel from './input_label'
@@ -46,7 +46,7 @@ export function SetLinkForm({ editor }: SetLinkFormProps) {
         <Modal.Trigger asChild>
           <Tooltip content={'Link'}>
             <MenuButton onClick={setLink} isActive={editor.isActive('link')}>
-              <Link1Icon />
+              <LinkIcon className='size-4' />
             </MenuButton>
           </Tooltip>
         </Modal.Trigger>
@@ -70,7 +70,7 @@ export function SetLinkForm({ editor }: SetLinkFormProps) {
                     `}
                   aria-label='Close'
                 >
-                  <Cross2Icon />
+                  <X className='size-4' />
                 </button>
               </Modal.Close>
             </section>

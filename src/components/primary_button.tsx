@@ -1,4 +1,4 @@
-import { SpringIcon } from '@/components/icons'
+import { SpringIcon } from './icons'
 
 export default function PrimaryButton({
   className = '',
@@ -20,7 +20,7 @@ export default function PrimaryButton({
                 } text-slate1 ${className}`}
       disabled={disabled}
     >
-      <SpringIcon className={'mr-2'} />
+      <SpringIcon className='size-4 mr-2' />
       {children}
     </button>
   )

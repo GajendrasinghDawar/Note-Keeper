@@ -1,7 +1,7 @@
 import ApplicationLogo from '@/components/application_logo'
-import { GrassIcon } from '@/components/icons'
 import { Link } from 'react-router-dom'
 import { usePWA } from '@/hooks/use_pwa'
+import { GrassIcon } from './icons'
 
 export default function Header() {
   const { canInstall, isStandalone, triggerInstall } = usePWA()
@@ -30,7 +30,7 @@ export default function Header() {
             to='note/create'
             className='bg-crimson9/95 text-slate1 sm:text-sm py-1 px-2 inline-flex items-center border-transparent font-semibold text-xs uppercase tracking-widest focus:outline-none focus-visible:ring-2 focus-visible:ring-crimson11 focus-visible:ring-offset-2 hover:bg-crimson10 transition ease-in-out duration-150 rounded-lg no-underline'
           >
-            <GrassIcon />
+            <GrassIcon className='size-5' />
             <span className='ml-1'>Create</span>
           </Link>
         </div>

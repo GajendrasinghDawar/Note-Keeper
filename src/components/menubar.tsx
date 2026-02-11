@@ -1,16 +1,17 @@
 import { useCurrentEditor } from '@tiptap/react'
 
 import {
-  FontFamilyIcon,
-  StrikethroughIcon,
-  FontBoldIcon,
-  DividerHorizontalIcon,
-  TextIcon,
-  ResetIcon,
-  HeadingIcon,
-  LineHeightIcon,
-} from '@radix-ui/react-icons'
-import { UndoIcon, RedoIcon } from './icons'
+  Bold,
+  Italic,
+  Strikethrough,
+  RemoveFormatting,
+  Pilcrow,
+  Heading2,
+  Minus,
+  WrapText,
+  Undo2,
+  Redo2,
+} from 'lucide-react'
 import Tooltip from './tooltip'
 import { MenuButton } from './menu_button'
 import { SetLinkForm } from './set_link_form'
@@ -35,7 +36,7 @@ export default function MenuBar() {
           disabled={!editor.can().chain().focus().toggleBold().run()}
           isActive={editor.isActive('bold')}
         >
-          <FontBoldIcon />
+          <Bold className='size-4' />
         </MenuButton>
       </Tooltip>
 
@@ -48,7 +49,7 @@ export default function MenuBar() {
           disabled={!editor.can().chain().focus().toggleItalic().run()}
           isActive={editor.isActive('italic')}
         >
-          <FontFamilyIcon />
+          <Italic className='size-4' />
         </MenuButton>
       </Tooltip>
 
@@ -61,7 +62,7 @@ export default function MenuBar() {
           disabled={!editor.can().chain().focus().toggleStrike().run()}
           isActive={editor.isActive('Strike')}
         >
-          <StrikethroughIcon />
+          <Strikethrough className='size-4' />
         </MenuButton>
       </Tooltip>
 
@@ -73,7 +74,7 @@ export default function MenuBar() {
           }}
           isActive={editor.isActive('clearMarks')}
         >
-          <ResetIcon />
+          <RemoveFormatting className='size-4' />
         </MenuButton>
       </Tooltip>
 
@@ -85,7 +86,7 @@ export default function MenuBar() {
           }}
           isActive={editor.isActive('paragraph')}
         >
-          <TextIcon />
+          <Pilcrow className='size-4' />
         </MenuButton>
       </Tooltip>
 
@@ -97,7 +98,7 @@ export default function MenuBar() {
           }}
           isActive={editor.isActive('heading')}
         >
-          <HeadingIcon />
+          <Heading2 className='size-4' />
         </MenuButton>
       </Tooltip>
 
@@ -109,7 +110,7 @@ export default function MenuBar() {
           }}
           isActive={editor.isActive('horizontalRule')}
         >
-          <DividerHorizontalIcon />
+          <Minus className='size-4' />
         </MenuButton>
       </Tooltip>
 
@@ -121,7 +122,7 @@ export default function MenuBar() {
           }}
           isActive={editor.isActive('hardBreak')}
         >
-          <LineHeightIcon />
+          <WrapText className='size-4' />
         </MenuButton>
       </Tooltip>
 
@@ -134,7 +135,7 @@ export default function MenuBar() {
           disabled={!editor.can().chain().focus().undo().run()}
           isActive={editor.isActive('undo')}
         >
-          <UndoIcon />
+          <Undo2 className='size-4' />
         </MenuButton>
       </Tooltip>
 
@@ -147,7 +148,7 @@ export default function MenuBar() {
           disabled={!editor.can().chain().focus().redo().run()}
           isActive={editor.isActive('redo')}
         >
-          <RedoIcon />
+          <Redo2 className='size-4' />
         </MenuButton>
       </Tooltip>
 
