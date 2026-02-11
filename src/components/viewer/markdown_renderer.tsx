@@ -7,7 +7,7 @@ interface MarkdownRendererProps {
 
 export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
   return (
-    <article className='prose prose-sm sm:prose-base lg:prose-lg xl:prose-2xl prose-slate max-w-none'>
+    <article className='prose max-w-none'>
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
     </article>
   )

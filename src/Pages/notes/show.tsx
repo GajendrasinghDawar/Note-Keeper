@@ -47,10 +47,7 @@ export default function Show() {
             </div>
           </section>
         </div>
-        <div
-          className='mt-4 prose prose-sm sm:prose-base lg:prose-lg xl:prose-2xl text-slate12'
-          dangerouslySetInnerHTML={{ __html: note.content }}
-        />
+        <div className='mt-4 prose' dangerouslySetInnerHTML={{ __html: note.content }} />
       </div>
     </div>
   )

@@ -181,8 +181,7 @@ export default function MarkdownViewer() {
                 content={file.content}
                 editorProps={{
                   attributes: {
-                    class:
-                      'prose prose-sm sm:prose-base lg:prose-lg xl:prose-2xl focus:outline-none overflow-y-auto h-full px-2 mb-3 min-h-40',
+                    class: 'prose focus:outline-none overflow-y-auto h-full px-2 mb-3 min-h-40',
                   },
                 }}
               />

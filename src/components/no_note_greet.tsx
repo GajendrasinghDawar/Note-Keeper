@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
+
 export default function NoNoteGreet() {
   return (
-    <div className='flex  justify-center w-full col-span-5 relative '>
+    <div className='flex flex-col gap-8 justify-center w-full col-span-5 relative '>
       <div className='fixed right-[30vw] -bottom-7  flex justify-center items-end z-10'>
         <img
           src='/images/scandi02.png'
@@ -43,6 +45,18 @@ export default function NoNoteGreet() {
             No notes found. Create a new note to get started.
           </p>
         </div>
+      </section>
+      <section>
+        <p className='text-center text-sm text-slate10 mt-2'>
+          or{' '}
+          <Link
+            to='/viewer'
+            className='text-crimson9 hover:text-crimson10 underline underline-offset-4'
+          >
+            open a Markdown file
+          </Link>{' '}
+          from your device
+        </p>
       </section>
     </div>
   )

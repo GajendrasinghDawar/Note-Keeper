@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "./theme.css";
-@plugin "@tailwindcss/typography";
+@import 'tailwindcss';
+@import './theme.css';
+@import './typography.css';
 
 html {
   scroll-behavior: smooth;
@@ -60,17 +60,9 @@ html {
     position: absolute;
     inset: 0;
     height: 200%;
-    background: linear-gradient(
-      to bottom,
-      var(--color-slate3) 0%,
-      transparent 50%
-    );
+    background: linear-gradient(to bottom, var(--color-slate3) 0%, transparent 50%);
 
-    mask-image: linear-gradient(
-      to bottom,
-      var(--color-slate3) 0% 50%,
-      transparent 50% 100%
-    );
+    mask-image: linear-gradient(to bottom, var(--color-slate3) 0% 50%, transparent 50% 100%);
     pointer-events: none;
     z-index: -1;
     @apply backdrop-blur-lg;
