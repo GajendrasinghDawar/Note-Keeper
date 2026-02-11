@@ -21,7 +21,7 @@ export default function Header() {
           {canInstall && !isStandalone && (
             <button
               onClick={triggerInstall}
-              className='text-slate12 sm:text-sm py-1 px-2 inline-flex items-center border-transparent font-semibold text-xs uppercase tracking-widest focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow11 focus-visible:ring-offset-2 hover:bg-yellow10 transition ease-in-out duration-150 rounded-md bg-yellow9/95 sm:py-2'
+              className='text-slate12 sm:text-sm px-2 inline-flex items-center border-transparent font-semibold text-xs uppercase tracking-widest focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow11 focus-visible:ring-offset-2 hover:bg-yellow10 transition ease-in-out duration-150 rounded-md bg-yellow9/95 py-2'
             >
               Install app
             </button>

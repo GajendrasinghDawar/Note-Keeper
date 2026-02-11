@@ -196,7 +196,6 @@ export default function MarkdownViewer() {
 function EmptyState({ onOpenFile }: { onOpenFile: () => void }) {
   return (
     <div className='flex flex-col items-center justify-center py-32 text-center'>
-      <div className='text-6xl mb-4'>📄</div>
       <h2 className='text-xl font-semibold text-slate12 mb-2'>Markdown Viewer</h2>
       <p className='text-sm text-slate10 mb-6 max-w-80'>
         Open a .md file to view or edit it. You can also drag & drop a file here, or open one from
