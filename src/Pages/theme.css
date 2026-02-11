@@ -1,37 +1,36 @@
 @theme {
   /* ── Fonts ── */
   --font-sans:
-    "Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    'Figtree', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
   --font-inter:
-    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
   --font-playwrite:
-    "Playwrite HR Lijeva", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-noto-sans: "Noto Sans Devanagari", sans-serif;
+    'Playwrite HR Lijeva', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-noto-sans: 'Noto Sans Devanagari', sans-serif;
 
-  /* ── Shadow scale (1-6) ── */
+  /* ── Shadow scale (1-6) — light ── */
   --shadow-1:
-    inset 0 -1px 1px 0 var(--color-slateA3),
-    inset 0 0 0 1px var(--color-slateA3),
-    inset 0 3px 4px 0 var(--color-blackA5), inset 0 0 0 1px var(--color-slateA4);
+    inset 0 0 0 1px var(--color-slateA5), inset 0 1.5px 2px 0 var(--color-slateA2),
+    inset 0 1.5px 2px 0 var(--color-blackA2);
   --shadow-2:
-    0 0 0 1px var(--color-slateA6), 0 0 0 0.5px var(--color-blackA3),
-    0 1px 1px 0 var(--color-blackA6), 0 2px 1px -1px var(--color-blackA6),
-    0 1px 3px 0 var(--color-blackA5);
+    0 0 0 1px var(--color-slateA3), 0 0 0 0.5px var(--color-blackA1),
+    0 1px 1px 0 var(--color-slateA2), 0 2px 1px -1px var(--color-blackA1),
+    0 1px 3px 0 var(--color-blackA1);
   --shadow-3:
-    0 0 0 1px var(--color-slateA6), 0 2px 3px -2px var(--color-blackA3),
-    0 3px 8px -2px var(--color-blackA6), 0 4px 12px -4px var(--color-blackA7);
+    0 0 0 1px var(--color-slateA3), 0 2px 3px -2px var(--color-slateA3),
+    0 3px 12px -4px var(--color-blackA2), 0 4px 16px -8px var(--color-blackA2);
   --shadow-4:
-    0 0 0 1px var(--color-slateA6), 0 8px 40px var(--color-blackA3),
-    0 12px 32px -16px var(--color-blackA5);
+    0 0 0 1px var(--color-slateA3), 0 8px 40px var(--color-blackA1),
+    0 12px 32px -16px var(--color-slateA3);
   --shadow-5:
-    0 0 0 1px var(--color-slateA6), 0 12px 60px var(--color-blackA5),
-    0 12px 32px -16px var(--color-blackA7);
+    0 0 0 1px var(--color-slateA3), 0 12px 60px var(--color-blackA3),
+    0 12px 32px -16px var(--color-slateA5);
   --shadow-6:
-    0 0 0 1px var(--color-slateA6), 0 12px 60px var(--color-blackA4),
-    0 16px 64px var(--color-blackA6), 0 16px 36px -20px var(--color-blackA11);
+    0 0 0 1px var(--color-slateA3), 0 12px 60px var(--color-blackA3),
+    0 16px 64px var(--color-slateA2), 0 16px 36px -20px var(--color-slateA7);
 
   /* ── BlackA / WhiteA ── */
   --color-blackA1: hsla(0, 0%, 0%, 0.05);
