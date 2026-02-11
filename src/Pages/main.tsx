@@ -12,6 +12,7 @@ import Index, { loader as IndexLoader } from './notes/index'
 import Show, { loader as ShowLoader } from '@/Pages/notes/show'
 import Edit, { loader as EditLoader } from '@/Pages/notes/edit'
 import { NotFound } from '@/components/not_found'
+import MarkdownViewer from '@/Pages/viewer'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         path: '/',
         element: <Index />,
         loader: IndexLoader,
+      },
+      {
+        path: 'viewer',
+        element: <MarkdownViewer />,
       },
       {
         path: 'note/create',

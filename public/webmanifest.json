@@ -1,66 +1,87 @@
 {
-    "name": "Note Keeper",
-    "short_name": "Notekeeper",
-    "start_url": "/",
-    "theme_color": "#94ce9a",
-    "background_color": "#94ce9a",
-    "scope": "./",
-    "display": "standalone",
-    "icons": [
+  "name": "Note Keeper",
+  "short_name": "Notekeeper",
+  "start_url": "/",
+  "theme_color": "#94ce9a",
+  "background_color": "#94ce9a",
+  "scope": "./",
+  "display": "standalone",
+  "file_handlers": [
+    {
+      "action": "/viewer",
+      "accept": {
+        "text/markdown": [".md", ".markdown", ".mdx", ".mdown"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "/viewer",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "files": [
         {
-            "src": "/icons/maskable-icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "/icons/maskable-icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "/icons/maskable-icon-rounded-1024.png",
-            "sizes": "1024x1024",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "/icons/maskable-icon-1024.png",
-            "sizes": "1024x1024",
-            "type": "image/png",
-            "purpose": "maskable"
+          "name": "file",
+          "accept": ["text/markdown", ".md"]
         }
-    ],
-    "description": "This app lets you add notes. It works offline and is installable, give it a try!",
-    "screenshots": [
-        {
-            "src": "/screenshots/homepage.png",
-            "sizes": "1366x625",
-            "type": "image/png",
-            "form_factor": "wide",
-            "label": "Note Keeper"
-        },
-        {
-            "src": "/screenshots/listpage.png",
-            "sizes": "320x480",
-            "type": "image/png"
-        },
-        {
-            "src": "/screenshots/homepage-mobile.png",
-            "sizes": "360x625",
-            "type": "image/png",
-            "form_factor": "narrow"
-        },
-        {
-            "src": "/screenshots/createpage.png",
-            "sizes": "1366x625",
-            "type": "image/png"
-        },
-        {
-            "src": "/screenshots/showpage.png",
-            "sizes": "1366x625",
-            "type": "image/png"
-        }
-    ]
+      ]
+    }
+  },
+  "icons": [
+    {
+      "src": "/icons/maskable-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable-icon-rounded-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "description": "This app lets you add notes. It works offline and is installable, give it a try!",
+  "screenshots": [
+    {
+      "src": "/screenshots/homepage.png",
+      "sizes": "1366x625",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Note Keeper"
+    },
+    {
+      "src": "/screenshots/listpage.png",
+      "sizes": "320x480",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshots/homepage-mobile.png",
+      "sizes": "360x625",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshots/createpage.png",
+      "sizes": "1366x625",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshots/showpage.png",
+      "sizes": "1366x625",
+      "type": "image/png"
+    }
+  ]
 }

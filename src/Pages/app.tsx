@@ -6,7 +6,7 @@ export default function App(): React.ReactElement {
     <div className='relative min-h-screen overflow-x-hidden'>
       <Header />
 
-      <main className='w-full md:max-w-[778px] mx-auto p-4'>
+      <main className='w-full md:max-w-194.5 mx-auto p-4'>
         <Outlet />
       </main>
     </div>

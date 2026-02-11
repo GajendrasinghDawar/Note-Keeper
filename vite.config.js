@@ -23,6 +23,8 @@ export default defineConfig({
         // This ensures that all assets (JS, CSS, images, etc.) in your build
         // output are precached, providing full offline support.
         globPatterns: ['**/*.{js,css,html,ico,png,svg,ttf,woff,woff2}'],
+        // Import the share target handler into the generated service worker.
+        importScripts: ['/share_target_handler.js'],
       },
       devOptions: {
         enabled: true,
@@ -37,6 +39,27 @@ export default defineConfig({
         background_color: '#94ce9a',
         display: 'standalone',
         scope: './',
+        file_handlers: [
+          {
+            action: '/viewer',
+            accept: {
+              'text/markdown': ['.md', '.markdown', '.mdx', '.mdown'],
+            },
+          },
+        ],
+        share_target: {
+          action: '/viewer',
+          method: 'POST',
+          enctype: 'multipart/form-data',
+          params: {
+            files: [
+              {
+                name: 'file',
+                accept: ['text/markdown', '.md'],
+              },
+            ],
+          },
+        },
         icons: [
           {
             src: '/icons/maskable-icon-512.png',
