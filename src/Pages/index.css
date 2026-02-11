@@ -1,9 +1,182 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-playwrite: "Playwrite HR Lijeva", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    --color-gray-gray1: #fcfcfc;
+    --color-gray-gray2: #f9f9f9;
+    --color-gray-gray3: #f0f0f0;
+    --color-gray-gray4: #e8e8e8;
+    --color-gray-gray5: #e0e0e0;
+    --color-gray-gray6: #d9d9d9;
+    --color-gray-gray7: #cecece;
+    --color-gray-gray8: #bbbbbb;
+    --color-gray-gray9: #8d8d8d;
+    --color-gray-gray10: #838383;
+    --color-gray-gray11: #646464;
+    --color-gray-gray12: #202020;
+
+    --color-sand-sand1: #fdfdfc;
+    --color-sand-sand2: #f9f9f8;
+    --color-sand-sand3: #f1f0ef;
+    --color-sand-sand4: #e9e8e6;
+    --color-sand-sand5: #e2e1de;
+    --color-sand-sand6: #dad9d6;
+    --color-sand-sand7: #cfceca;
+    --color-sand-sand8: #bcbbb5;
+    --color-sand-sand9: #8d8d86;
+    --color-sand-sand10: #82827c;
+    --color-sand-sand11: #63635e;
+    --color-sand-sand12: #21201c;
+
+    --color-yellow-yellow1: #fdfdf9;
+    --color-yellow-yellow2: #fefce9;
+    --color-yellow-yellow3: #fffab8;
+    --color-yellow-yellow4: #fff394;
+    --color-yellow-yellow5: #ffe770;
+    --color-yellow-yellow6: #f3d768;
+    --color-yellow-yellow7: #e4c767;
+    --color-yellow-yellow8: #d5ae39;
+    --color-yellow-yellow9: #ffe629;
+    --color-yellow-yellow10: #ffdc00;
+    --color-yellow-yellow11: #9e6c00;
+    --color-yellow-yellow12: #473b1f;
+
+    --color-iris-iris1: #fdfdff;
+    --color-iris-iris2: #f8f8ff;
+    --color-iris-iris3: #f0f1fe;
+    --color-iris-iris4: #e6e7ff;
+    --color-iris-iris5: #dadcff;
+    --color-iris-iris6: #cbcdff;
+    --color-iris-iris7: #b8baf8;
+    --color-iris-iris8: #9b9ef0;
+    --color-iris-iris9: #5b5bd6;
+    --color-iris-iris10: #5151cd;
+    --color-iris-iris11: #5753c6;
+    --color-iris-iris12: #272962;
+
+    --color-amber-amber1: #fefdfb;
+    --color-amber-amber2: #fefbe9;
+    --color-amber-amber3: #fff7c2;
+    --color-amber-amber4: #ffee9c;
+    --color-amber-amber5: #fbe577;
+    --color-amber-amber6: #f3d673;
+    --color-amber-amber7: #e9c162;
+    --color-amber-amber8: #e2a336;
+    --color-amber-amber9: #ffc53d;
+    --color-amber-amber10: #ffba18;
+    --color-amber-amber11: #ab6400;
+    --color-amber-amber12: #4f3422;
+
+    --color-crimson-crimson1: #fffcfd;
+    --color-crimson-crimson2: #fef7f9;
+    --color-crimson-crimson3: #ffe9f0;
+    --color-crimson-crimson4: #fedce7;
+    --color-crimson-crimson5: #facedd;
+    --color-crimson-crimson6: #f3bed1;
+    --color-crimson-crimson7: #eaacc3;
+    --color-crimson-crimson8: #e093b2;
+    --color-crimson-crimson9: #e93d82;
+    --color-crimson-crimson10: #df3478;
+    --color-crimson-crimson11: #cb1d63;
+    --color-crimson-crimson12: #621639;
+
+    --color-grass-grass1: #fbfefb;
+    --color-grass-grass2: #f5fbf5;
+    --color-grass-grass3: #e9f6e9;
+    --color-grass-grass4: #daf1db;
+    --color-grass-grass5: #c9e8ca;
+    --color-grass-grass6: #b2ddb5;
+    --color-grass-grass7: #94ce9a;
+    --color-grass-grass8: #65ba74;
+    --color-grass-grass9: #46a758;
+    --color-grass-grass10: #3e9b4f;
+    --color-grass-grass11: #2a7e3b;
+    --color-grass-grass12: #203c25;
+
+    --color-jade-jade1: #fbfefd;
+    --color-jade-jade2: #f4fbf7;
+    --color-jade-jade3: #e6f7ed;
+    --color-jade-jade4: #d6f1e3;
+    --color-jade-jade5: #c3e9d7;
+    --color-jade-jade6: #acdec8;
+    --color-jade-jade7: #8bceb6;
+    --color-jade-jade8: #56ba9f;
+    --color-jade-jade9: #29a383;
+    --color-jade-jade10: #26997b;
+    --color-jade-jade11: #208368;
+    --color-jade-jade12: #1d3b31;
+
+    --color-green-green1: #fbfefc;
+    --color-green-green2: #f4fbf6;
+    --color-green-green3: #e6f6eb;
+    --color-green-green4: #d6f1df;
+    --color-green-green5: #c4e8d1;
+    --color-green-green6: #adddc0;
+    --color-green-green7: #8eceaa;
+    --color-green-green8: #5bb98b;
+    --color-green-green9: #30a46c;
+    --color-green-green10: #2b9a66;
+    --color-green-green11: #218358;
+    --color-green-green12: #193b2d;
+
+    --color-red-red1: #fffcfc;
+    --color-red-red2: #fff7f7;
+    --color-red-red3: #feebec;
+    --color-red-red4: #ffdbdc;
+    --color-red-red5: #ffcdce;
+    --color-red-red6: #fdbdbe;
+    --color-red-red7: #f4a9aa;
+    --color-red-red8: #eb8e90;
+    --color-red-red9: #e5484d;
+    --color-red-red10: #dc3e42;
+    --color-red-red11: #ce2c31;
+    --color-red-red12: #641723;
+
+    --color-tomato-tomato1: #fffcfc;
+    --color-tomato-tomato2: #fff8f7;
+    --color-tomato-tomato3: #feebe7;
+    --color-tomato-tomato4: #ffdcd3;
+    --color-tomato-tomato5: #ffcdc2;
+    --color-tomato-tomato6: #fdbdaf;
+    --color-tomato-tomato7: #f5a898;
+    --color-tomato-tomato8: #ec8e7b;
+    --color-tomato-tomato9: #e54d2e;
+    --color-tomato-tomato10: #dd4425;
+    --color-tomato-tomato11: #d13415;
+    --color-tomato-tomato12: #5c271f;
+
+    --color-blackA-blackA1: rgba(0, 0, 0, 0.05);
+    --color-blackA-blackA2: rgba(0, 0, 0, 0.1);
+    --color-blackA-blackA3: rgba(0, 0, 0, 0.15);
+    --color-blackA-blackA4: rgba(0, 0, 0, 0.2);
+    --color-blackA-blackA5: rgba(0, 0, 0, 0.3);
+    --color-blackA-blackA6: rgba(0, 0, 0, 0.4);
+    --color-blackA-blackA7: rgba(0, 0, 0, 0.5);
+    --color-blackA-blackA8: rgba(0, 0, 0, 0.6);
+    --color-blackA-blackA9: rgba(0, 0, 0, 0.7);
+    --color-blackA-blackA10: rgba(0, 0, 0, 0.8);
+    --color-blackA-blackA11: rgba(0, 0, 0, 0.9);
+    --color-blackA-blackA12: rgba(0, 0, 0, 0.95);
+
+    --color-whiteA-whiteA1: rgba(255, 255, 255, 0.05);
+    --color-whiteA-whiteA2: rgba(255, 255, 255, 0.1);
+    --color-whiteA-whiteA3: rgba(255, 255, 255, 0.15);
+    --color-whiteA-whiteA4: rgba(255, 255, 255, 0.2);
+    --color-whiteA-whiteA5: rgba(255, 255, 255, 0.3);
+    --color-whiteA-whiteA6: rgba(255, 255, 255, 0.4);
+    --color-whiteA-whiteA7: rgba(255, 255, 255, 0.5);
+    --color-whiteA-whiteA8: rgba(255, 255, 255, 0.6);
+    --color-whiteA-whiteA9: rgba(255, 255, 255, 0.7);
+    --color-whiteA-whiteA10: rgba(255, 255, 255, 0.8);
+    --color-whiteA-whiteA11: rgba(255, 255, 255, 0.9);
+    --color-whiteA-whiteA12: rgba(255, 255, 255, 0.95);
+}
 
 html,
 body {
     height: 100%;
 }
-

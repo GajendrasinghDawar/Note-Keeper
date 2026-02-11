@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react-swc'
 import { URL, fileURLToPath } from 'node:url'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -10,6 +11,7 @@ export default defineConfig({
     // jsxInject: `import React from 'react'`,
   },
   plugins: [
+    tailwindcss(),
     react(),
     VitePWA({
       // This setting handles the update flow. 'autoUpdate' will refresh the

@@ -23,7 +23,7 @@ export default function ErrorPage() {
       </p>
       <button
         onClick={handleGoHome}
-        className="px-4 py-2 bg-iris-iris5 text-iris-iris11 font-semibold rounded-lg shadow-md hover:bg-iris-iris6 focus:outline-none focus:ring-2 focus:ring-iris-iris4 focus:ring-opacity-75 transition duration-300 ease-in-out transform"
+        className="px-4 py-2 bg-iris-iris5 text-iris-iris11 font-semibold rounded-lg shadow-md hover:bg-iris-iris6 focus:outline-none focus:ring-2 focus:ring-iris-iris4/75 transition duration-300 ease-in-out transform"
       >
         Go back To Home
       </button>
