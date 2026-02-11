@@ -73,7 +73,7 @@ export function CaretDownIcon({ className }: IconProps) {
   return (
     <svg
       className={`
-                absolute top-1/2 right-0 transform -translate-y-1/2 transition-transform duration-500 ease-in-out group-hover:rotate-180 h-5 w-5 fill-current mt-[1px] group-hover:scale-90 inline-block
+                absolute top-1/2 right-0 transform -translate-y-1/2 transition-transform duration-500 ease-in-out group-hover:rotate-180 h-5 w-5 fill-current mt-px group-hover:scale-90 inline-block
                 ${className}`}
       width='15'
       height='15'

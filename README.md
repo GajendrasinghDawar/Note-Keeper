@@ -7,8 +7,7 @@ This is a Progressive Web App (PWA) built with React. It provides offline capabi
 1. Offline support.
 2. Installable on desktop and mobile devices.
 3. Rich Text Editing support.
-6. Responsive design.
-
+4. view markdown.
 
 ## Used Technologies
 
@@ -18,6 +17,7 @@ This is a Progressive Web App (PWA) built with React. It provides offline capabi
 - **Tailwind CSS**: For styling the application.
 - **IndexedDB**: For storing notes offline.
 - **Vercel**: For deployment.
+- **tiptap**: for editing
 
 **Follow these instructions to get a copy of the project for running on your local machine.**
 
@@ -37,13 +37,13 @@ cd Note-Keeper
 ```
 
 3. **Start the development server:**
+
 ```bash
-    npm run dev 
+    npm run dev
 ```
 
-**Here are some  resources if you want to learn more about Progressive Web App design patterns:**
+**Here are some resources if you want to learn more about Progressive Web App design patterns:**
 
 - [Web.dev: Progressive Web Apps](https://web.dev/progressive-web-apps/)
 - [MDN Web Docs: Progressive Web Apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 - [Mr. Maximiliano Firtman's website](https://firt.dev/)
-
