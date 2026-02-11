@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { marked } from 'marked'
 import { DB } from '@/utils/db'
 import type { Note } from '@/types'
 
@@ -37,9 +38,10 @@ export default function ViewerToolbar({
 
     try {
       const title = fileName.replace(/\.(md|markdown|mdx|mdown)$/i, '') || 'Imported note'
+      const html = await marked(rawMarkdown, { gfm: true, breaks: true })
       const note: Note = {
         title,
-        content: rawMarkdown,
+        content: html,
         created: new Date(),
       }
       const id = await DB.saveNote(note)
