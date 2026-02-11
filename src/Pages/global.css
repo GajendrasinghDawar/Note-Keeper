@@ -8,7 +8,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-slate2 text-slate11 selection:bg-crimsonA3 selection:text-slate12 text-balance;
+    @apply bg-slate2 text-slate11 selection:bg-crimsonA3 selection:text-slate12 text-balance overflow-x-hidden;
   }
 
   h1,
