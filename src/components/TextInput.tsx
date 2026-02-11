@@ -20,7 +20,7 @@ const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
                 { ...props }
                 type={ type }
                 className={
-                    "border  border-sand-sand6 focus:bg-sand-sand4 focus:border-sand-sand9 focus:ring-0 rounded-lg " +
+                    "border  border-slate6 focus:bg-slate4 focus:border-slate9 focus:ring-0 rounded-lg " +
                     className
                 }
                 ref={ inputRef }

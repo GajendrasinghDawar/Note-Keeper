@@ -44,8 +44,9 @@ React 18 SPA with PWA support (vite-plugin-pwa). Client-only, no backend.
 ## Color of My app
 
 - **Primary:** yellow
-- **Secondary:** Jade
-- **Tertiary:**
+- **Secondary:** crimson
+- **Tertiary:** jade
+- **Accent:** yellow
 - **Gray scale:** Slate
 - **Body background:**
 

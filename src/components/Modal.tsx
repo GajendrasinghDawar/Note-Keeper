@@ -66,7 +66,7 @@ function ModalContent({ open, children }: ModalContentProps) {
                             variants={ overlayVariants }
                         >
                             <Dialog.Content
-                                className="max-h-[85vh] w-[90vw] max-w-[450px] rounded-lg focus:outline-none relative  flex flex-col bg-sand-sand2 shadow-xl shadow-sand-sand7"
+                                className="max-h-[85vh] w-[90vw] max-w-[450px] rounded-lg focus:outline-none relative  flex flex-col bg-slate2 shadow-xl shadow-slate7"
                                 asChild
                             >
                                 <motion.div

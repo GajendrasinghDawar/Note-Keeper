@@ -4,7 +4,7 @@ interface IconProps extends React.SVGProps<SVGSVGElement> {
 
 export function UndoIcon(): React.ReactElement {
     return (
-        <svg fill="none" viewBox="0 0 24 24" strokeWidth={ 1 } stroke="currentColor" className="size-4 stroke-sand-sand11">
+        <svg fill="none" viewBox="0 0 24 24" strokeWidth={ 1 } stroke="currentColor" className="size-4 stroke-slate11">
             <path strokeLinecap="round" strokeLinejoin="round" d="m16.49 12 3.75 3.75m0 0-3.75 3.75m3.75-3.75H3.74V4.499" />
         </svg>
     )
@@ -12,7 +12,7 @@ export function UndoIcon(): React.ReactElement {
 
 export function RedoIcon() {
     return (
-        <svg fill="none" viewBox="0 0 24 24" strokeWidth={ 1 } stroke="currentColor" className="size-4 stroke-sand-sand11">
+        <svg fill="none" viewBox="0 0 24 24" strokeWidth={ 1 } stroke="currentColor" className="size-4 stroke-slate11">
             <path strokeLinecap="round" strokeLinejoin="round" d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499" />
         </svg>
     )
@@ -20,7 +20,7 @@ export function RedoIcon() {
 
 export function NotificationIcon() {
     return (
-        <svg fill="none" viewBox="0 0 24 24" strokeWidth={ 1.5 } stroke="currentColor" className="size-4 stroke-sand-sand11">
+        <svg fill="none" viewBox="0 0 24 24" strokeWidth={ 1.5 } stroke="currentColor" className="size-4 stroke-slate11">
             <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
         </svg>
     )
@@ -28,7 +28,7 @@ export function NotificationIcon() {
 
 export function PlusIcon() {
     return (
-        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" className="size-4 stroke-sand-sand11">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" className="size-4 stroke-slate11">
             <path d="M8 2.75C8 2.47386 7.77614 2.25 7.5 2.25C7.22386 2.25 7 2.47386 7 2.75V7H2.75C2.47386 7 2.25 7.22386 2.25 7.5C2.25 7.77614 2.47386 8 2.75 8H7V12.25C7 12.5261 7.22386 12.75 7.5 12.75C7.77614 12.75 8 12.5261 8 12.25V8H12.25C12.5261 8 12.75 7.77614 12.75 7.5C12.75 7.22386 12.5261 7 12.25 7H8V2.75Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path>
         </svg>
     )
@@ -52,7 +52,7 @@ export function CaretDownIcon({ className }: IconProps) {
 export function ViewsCountIcon({ className, ...props }: IconProps) {
     return (
         <svg
-            className={ `w-5 h-7 fill-gray-gray11 ` + className }
+            className={ `w-5 h-7 fill-slate11 ` + className }
             { ...props }
             viewBox="0 0 24 24" aria-hidden="true">
             <g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg>
@@ -64,7 +64,7 @@ export function ViewsCountIcon({ className, ...props }: IconProps) {
 export function ReplyCountIcon({ className, ...props }: IconProps) {
     return (
         <svg
-            className={ `w-5 h-7 fill-gray-gray11 ` + className }
+            className={ `w-5 h-7 fill-slate11 ` + className }
             { ...props }
             viewBox="0 0 24 24" aria-hidden="true"><g>
                 <path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z">
@@ -77,7 +77,7 @@ export function ReplyCountIcon({ className, ...props }: IconProps) {
 export function LikeCountIcon({ className, ...props }: IconProps) {
     return (
         <svg
-            className={ `w-5 h-7 fill-gray-gray11 ` + className }
+            className={ `w-5 h-7 fill-slate11 ` + className }
             { ...props }
             viewBox="0 0 24 24" aria-hidden="true" ><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
     )
@@ -86,7 +86,7 @@ export function LikeCountIcon({ className, ...props }: IconProps) {
 export function CalenderIcon({ className, ...props }: IconProps) {
     return (
         <svg
-            className={ `w-4 h-4 fill-gray-gray11 ` + className }
+            className={ `w-4 h-4 fill-slate11 ` + className }
             { ...props }
             width="15" height="15" viewBox="0 0 15 15"
             fill="none">
@@ -99,7 +99,7 @@ export function CalenderIcon({ className, ...props }: IconProps) {
 export function MailIcon({ className, ...props }: IconProps) {
     return (
         <svg
-            className={ `w-4 h-4 text-gray-gray11 ` + className }
+            className={ `w-4 h-4 text-slate11 ` + className }
             { ...props }
             fill="none" viewBox="0 0 24 24" strokeWidth={ 1.5 } stroke="currentColor" >
             <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
@@ -111,7 +111,7 @@ export function MailIcon({ className, ...props }: IconProps) {
 export function ProfileIcon({ className, ...props }: IconProps) {
     return (
         <svg
-            className={ `w-5 h-7 fill-gray-gray11 ` + className }
+            className={ `w-5 h-7 fill-slate11 ` + className }
             { ...props }
             fill="none" viewBox="0 0 24 24" strokeWidth={ 1.5 } stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -123,8 +123,8 @@ export function DeleteIcon({ className, ...props }: IconProps) {
     return (
         <svg
             className={ `w-5 h-7 
-                 text-gray-gray11                               
-                 fill-gray-gray2                                      ` + className }
+                 text-slate11                               
+                 fill-slate2                                      ` + className }
             { ...props }
 
             fill="none" viewBox="0 0 24 24" strokeWidth={ 1.5 } stroke="currentColor" >
@@ -138,8 +138,8 @@ export function SearchIcon({ className, ...props }: IconProps) {
     return (
         <svg
             className={ `w-5 h-7 
-             text-gray-gray11                               
-             fill-gray-gray2    ` + className }
+             text-slate11                               
+             fill-slate2    ` + className }
             { ...props }
             fill="none" viewBox="0 0 24 24" strokeWidth={ 1.5 } stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />

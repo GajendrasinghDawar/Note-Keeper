@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@import "./theme.css";
+@plugin "@tailwindcss/typography";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-slate2 text-slate11 selection:bg-crimsonA3 selection:text-slate12 text-balance;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold text-slate12 mb-3;
+  }
+
+  h1 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h2 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h3 {
+    @apply text-lg md:text-xl;
+  }
+
+  p {
+    @apply text-slate11 mb-3;
+  }
+
+  a {
+    @apply text-crimson9 font-medium transition-colors duration-150;
+  }
+
+  a:hover {
+    @apply text-crimson10 underline;
+  }
+
+  label {
+    @apply block mb-1 text-slate11 text-sm font-medium;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply bg-slate3 border border-slate6 px-3 py-2 text-slate11 placeholder:text-slate9 focus:border-crimson8 focus:ring-1 focus:ring-crimson8 focus:outline-none rounded-md;
+  }
+}
+
+@layer components {
+  .header-backdrop {
+    position: absolute;
+    inset: 0;
+    height: 200%;
+    background: linear-gradient(
+      to bottom,
+      var(--color-slate3) 0%,
+      transparent 50%
+    );
+
+    mask-image: linear-gradient(
+      to bottom,
+      var(--color-slate3) 0% 50%,
+      transparent 50% 100%
+    );
+    pointer-events: none;
+    z-index: -1;
+    @apply backdrop-blur-lg;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-slate2) inset !important;
+  -webkit-text-fill-color: var(--color-slate12) !important;
+}
+
+.chat-textarea-scrollbar {
+  scrollbar-color: var(--color-slate6) var(--color-slate8);
+  scrollbar-width: thin;
+}
