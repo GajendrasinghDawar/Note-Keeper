@@ -10,7 +10,9 @@ interface ViewerToolbarProps {
   isDirty: boolean
   hasFile: boolean
   canSaveBack: boolean
+  hasDirHandle: boolean
   onOpenFile: () => void
+  onOpenFolder: () => void
   onToggleMode: () => void
   onSave: () => void
   onSaveAs: () => void
@@ -23,7 +25,9 @@ export default function ViewerToolbar({
   isDirty,
   hasFile,
   canSaveBack,
+  hasDirHandle,
   onOpenFile,
+  onOpenFolder,
   onToggleMode,
   onSave,
   onSaveAs,
@@ -68,6 +72,17 @@ export default function ViewerToolbar({
       >
         Open file
       </button>
+
+      {/* Open folder — enables relative .md links */}
+      {hasFile && !hasDirHandle && (
+        <button
+          onClick={onOpenFolder}
+          className='text-xs font-medium px-3 py-1.5 rounded-md bg-yellow9 text-slate1 hover:bg-yellow10 transition-colors'
+          title='Open the folder containing this file to enable relative markdown links'
+        >
+          Open Folder
+        </button>
+      )}
 
       {/* Toggle view/edit */}
       {hasFile && (

@@ -61,11 +61,13 @@ export default function MarkdownViewer() {
     file,
     isDirty,
     openFile,
+    openFolder,
     saveFile,
     saveFileAs,
     updateContent,
     readFileHandle,
     loadReadOnlyFile,
+    openRelativeFile,
   } = useFileHandler()
 
   // Launch Queue: OS opens a .md file with this app
@@ -155,7 +157,9 @@ export default function MarkdownViewer() {
           isDirty={isDirty}
           hasFile={!!file.content}
           canSaveBack={canSaveBack}
+          hasDirHandle={!!file.dirHandle}
           onOpenFile={openFile}
+          onOpenFolder={openFolder}
           onToggleMode={toggleMode}
           onSave={handleSave}
           onSaveAs={handleSaveAs}
@@ -170,7 +174,7 @@ export default function MarkdownViewer() {
               onOpenReadOnly={loadReadOnlyFile}
             />
           ) : mode === 'view' ? (
-            <MarkdownRenderer content={file.content} />
+            <MarkdownRenderer content={file.content} onOpenRelativeMd={openRelativeFile} />
           ) : (
             <div className='border border-slate6 rounded-lg overflow-hidden focus-within:border-slate9'>
               <EditorProvider
