@@ -58,7 +58,7 @@ export default function ViewerToolbar({
   }
 
   return (
-    <div className='flex flex-wrap items-center gap-2 px-3 py-2 border-b border-slate5 bg-slate2 sticky top-0 z-10'>
+    <div className='flex flex-wrap items-center gap-2 px-3 py-2 border-b border-slate5 bg-slate2 sticky top-12 md:top-14 z-10'>
       {/* File name */}
       <span className='text-sm font-medium text-slate11 truncate max-w-48 mr-auto'>
         {fileName || 'No file open'}
@@ -77,7 +77,7 @@ export default function ViewerToolbar({
       {hasFile && !hasDirHandle && (
         <button
           onClick={onOpenFolder}
-          className='text-xs font-medium px-3 py-1.5 rounded-md bg-yellow9 text-slate1 hover:bg-yellow10 transition-colors'
+          className='text-xs font-medium px-3 py-1.5 rounded-md bg-yellow9 text-slate11 hover:bg-yellow10 transition-colors'
           title='Open the folder containing this file to enable relative markdown links'
         >
           Open Folder
